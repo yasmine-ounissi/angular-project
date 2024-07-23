@@ -1,0 +1,243 @@
+<div class="container">
+    <h1>Organisation</h1>
+    <div class="assessment-container">
+        <form id="orgaform" (submit)="onSubmit($event)" class="needs-validation" novalidate>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th colspan="5">Organisation Section 1</th>
+                        <th>Assessment</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td colspan="5" class="text-success"><b>1. In my company the people from the following functional areas have day-to-day involvement in managing environmental and social (OHS, labor, and community) risks and impacts:</b></td>
+                        <td colspan="2"></td>
+                        
+                    </tr>
+                    <tr>
+                        <td colspan="5">We only deal with these matters on a case-by-case basis, so no one is assigned. (0)</td>
+                        <td colspan="2" rowspan="6"><input type="number" name="q1" min="0" max="5" class="form-control"  required></td>
+                    </tr>
+                    <tr>
+                        <td colspan="5">This is usually handled on a limited basis by one or two people in the areas that manage our customer/investor relationships, such as Marketing, Finance, Administration and Legal. They handle these issues only when customers and investors ask. (1)</td>
+                    </tr>
+                    <tr>
+                        <td colspan="5">The people that manage our customer/investor relationships have some knowledge and involvement. Each issue is also handled by the relevant functional area – labor issues are handled only by HR, environmental issues are handled only by EHS, and community issues by Communication/CSR. (2)</td>
+                    </tr>
+                    <tr>
+                        <td colspan="5">The people that manage our customer/investor relationships are trained and involved, as well as the people in the HR, EHS and Communication/CSR areas. They work together with trained people in the Production and Maintenance departments, so that environmental and social issues are reviewed as part of daily operations. (3)</td>
+                    </tr>
+                    <tr>
+                        <td colspan="5">We have a cross-functional team of trained people from all the internal business and operations areas, led by a senior management member. They meet and review environmental and social issues on a routine basis. There is an integrated management system that covers the Quality, EHS, and Labor areas. (4)</td>
+                    </tr>
+                    <tr>
+                        <td colspan="5">We have a cross-functional team of trained people from all the business and operations areas, including our supply chain. They are led by a senior management member and meet and review environmental and social issues on a routine basis. There is an integrated management system that covers the Quality, EHS, Labor, and Community Relations areas. Our Sourcing/Procurement area is involved in extending our environmental and social policies to our supply chain. (5)</td>
+                    </tr>
+                    <tr>
+                        <td colspan="5" class="text-success"><b>2. The people at my company involved in managing environmental and social risks and impacts have the responsibility and authority to do the following:</b></td>
+                        <td colspan="2"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="5">1. Develop and modify policies</td>
+                        <td>
+                            <select name="q1" class="form-control" required>
+                                <option value="" disabled selected>Please choose an option</option>
+                                <option value="yes">Yes</option>
+                                <option value="no">No</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="5">2. Revise and implement procedures and work instructions</td>
+                        <td>
+                            <select name="q2" class="form-control" required>
+                                <option value="" disabled selected>Please choose an option</option>
+                                <option value="yes">Yes</option>
+                                <option value="no">No</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="5">3. Conduct internal monitoring</td>
+                        <td>
+                            <select name="q3" class="form-control" required>
+                                <option value="" disabled selected>Please choose an option</option>
+                                <option value="yes">Yes</option>
+                                <option value="no">No</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="5">4. Follow up on the internal and external audits to address problems</td>
+                        <td>
+                            <select name="q4" class="form-control" required>
+                                <option value="" disabled selected>Please choose an option</option>
+                                <option value="yes">Yes</option>
+                                <option value="no">No</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="5">5. Conduct manager and worker training</td>
+                        <td>
+                            <select name="q5"class="form-control" required>
+                                <option value="" disabled selected>Please choose an option</option>
+                                <option value="yes">Yes</option>
+                                <option value="no">No</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="5">6. Establish and manage worker communication channels</td>
+                        <td>
+                            <select name="q6" class="form-control" required>
+                                <option value="" disabled selected>Please choose an option</option>
+                                <option value="yes">Yes</option>
+                                <option value="no">No</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="5">7. Coordinate among the business departments to implement Action Plans</td>
+                        <td>
+                            <select name="q7" class="form-control" required>
+                                <option value="" disabled selected>Please choose an option</option>
+                                <option value="yes">Yes</option>
+                                <option value="no">No</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="5">8. Approve or veto business decisions that have significant potential negative impact</td>
+                        <td>
+                            <select name="q8" class="form-control" required>
+                                <option value="" disabled selected>Please choose an option</option>
+                                <option value="yes">Yes</option>
+                                <option value="no">No</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="5">9. Hire external experts as needed</td>
+                        <td>
+                            <select name="q9" class="form-control" required>
+                                <option value="" disabled selected>Please choose an option</option>
+                                <option value="yes">Yes</option>
+                                <option value="no">No</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="5">10. Manage environmental and social issues with suppliers and contractors</td>
+                        <td>
+                            <select name="q10" class="form-control" required>
+                                <option value="" disabled selected>Please choose an option</option>
+                                <option value="yes">Yes</option>
+                                <option value="no">No</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="5">11. Engage local organizations, government, trade union and other groups on issues related to workers, environment and community</td>
+                        <td>
+                            <select name="q11" class="form-control" required>
+                                <option value="" disabled selected>Please choose an option</option>
+                                <option value="yes">Yes</option>
+                                <option value="no">No</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="5">12. Report on performance to senior management</td>
+                        <td>
+                            <select name="q12" class="form-control" required>
+                                <option value="" disabled selected>Please choose an option</option>
+                                <option value="yes">Yes</option>
+                                <option value="no">No</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="5">0 of the above activities (0)</td>
+                        <td colspan="2" rowspan="6"><input type="number" name="q2" min="0" max="5" class="form-control" required></td>
+                    </tr>
+                    <tr>
+                        <td colspan="5">1-2 of the above activities (1)</td>
+                    </tr>
+                    <tr>
+                        <td colspan="5">3-4 of the above activities (2)</td>
+                    </tr>
+                    <tr>
+                        <td colspan="5">6-7 of the above activities (3)</td>
+                    </tr>
+                    <tr>
+                        <td colspan="5">8-9 of the above activities (4)</td>
+                    </tr>
+                    <tr>
+                        <td colspan="5">10-12 of the above activities (5)</td>
+                    </tr>
+                    <tr>
+                        <td colspan="5" class="text-success"><b>3. The following best describes our current expertise to develop and manage our ESMS:</b></td>
+                        <td colspan="2"></td>
+                       
+                    </tr>
+                    <tr>
+                        <td colspan="5">We do not have environmental and social expertise in our company. (0)</td>
+                        <td colspan="2" rowspan="6"><input type="number" name="q3" min="0" max="5" class="form-control" required></td>
+                    </tr>
+                    <tr>
+                        <td colspan="5">We do not have environmental and social expertise in our company. We completely rely on external parties. (1)</td>
+                    </tr>
+                    <tr>
+                        <td colspan="5">We have some staff with knowledge on environmental and social issues. They review materials from our investors, customers and external parties. (2)</td>
+                    </tr>
+                    <tr>
+                        <td colspan="5">We have competent professionals with current knowledge and skills on environmental and social issues, including regulatory requirements and industry best practices. (3)</td>
+                    </tr>
+                    <tr>
+                        <td colspan="5">We have competent professionals with current knowledge and skills on environmental and social issues, including regulatory requirements and industry best practices. We involve external experts to assist in the identification of risks for complex projects. (4)</td>
+                    </tr>
+                    <tr>
+                        <td colspan="5">We have competent professionals with current knowledge and skills on environmental and social issues, including regulatory requirements and industry best practices. They have also been trained on management system standards. We involve external experts to assist in the identification of risks for complex projects. (5)</td>
+                    </tr>
+                    <tr>
+                        <td colspan="5" class="text-success"><b>4. Training for our employees about our ESMS is best described by the following statement:</b></td>
+                        <td colspan="2"></td>
+                        
+                    </tr>
+                    <tr>
+                        <td colspan="5">We focus our employee training on job-related skills only. (0)</td>
+                        <td colspan="2" rowspan="6"><input type="number" name="q4" min="0" max="5" class="form-control" required></td>
+                        
+                    </tr>
+                    <tr>
+                        <td colspan="5">We introduce our environmental and social policies in our employee orientation. (1)</td>
+                    </tr>
+                    <tr>
+                        <td colspan="5">In addition to the employee orientation, we provide additional training for our EHS and HR staff. (2)</td>
+                    </tr>
+                    <tr>
+                        <td colspan="5">We provide ongoing introductory and refresher training at least once a year to all managers and workers. Workers are trained on the environmental and social policies and procedures that apply to their work area. (3)</td>
+                    </tr>
+                    <tr>
+                        <td colspan="5">We provide ongoing introductory and refresher training at least once a year to all managers and workers, including full-time, part-time, temporary and contractors. Training is based on the content of the policies and procedures that apply to each area. (4)</td>
+                    </tr>
+                    <tr>
+                        <td colspan="5">Everyone in our company receives ongoing training on the applicable environmental and social policies and procedures. The people responsible for the ESMS receive specialized training in management systems, monitoring and internal auditing, root cause analysis, and continual improvement programs. We measure the effectiveness of our training through tests, surveys and interviews to continually improve our training program. (5)</td>
+                    </tr>
+                </tbody>
+            </table>
+            <br>
+            <div id="scoreDisplay" style="display: none;">
+                <h2>Organisation Scores:</h2>
+                <p id="scoreValue"></p>
+            </div>
+            <div class="d-flex justify-content-between">
+            <button id="submitBtn" type="submit" class="btn btn-primary">Submit</button>
+            <button id="cancelBtn" type="button" class="btn btn-secondary"><a href="index.html" class="text-white text-decoration-none">Cancel</a></button>
+            <button id="nextBtn" type="button" class="btn btn-success" routerLink="/emergy">Next</button>
+        </div>
+        </form>
+    </div>
+</div>

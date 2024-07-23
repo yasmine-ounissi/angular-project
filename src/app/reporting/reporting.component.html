@@ -1,0 +1,215 @@
+<!-- app.component.html or your specific component template -->
+
+<div class="container mt-4">
+    <h1 class="mb-4">Ongoing Reporting to Affected Communities</h1>
+    
+    <div class="assessment-container">
+        <form id="reportForm" (submit)="onSubmit($event)" class="needs-validation" novalidate>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th colspan="5">Ongoing Reporting to Affected Communities</th>
+                        <th>Company Self-Assessment</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td colspan="5" class="text-success">
+                            <b>1. If there are concerns or complaints from affected communities about environmental and/or social risks and impacts, we communicate with them in the following way:</b>
+                        </td>
+                        <td colspan="1"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="5">We do not communicate with anyone about our company’s operations. (0)</td>
+                        <td rowspan="6"><input type="number" name="q1" min="0" max="5" class="form-control" required></td>
+                    </tr>
+                    <tr>
+                        <td colspan="5">We acknowledge receipt of their request and tell them we will handle it internally. (1)</td>
+                    </tr>
+                    <tr>
+                        <td colspan="5">We respond if the affected community contacts us with a specific request for information. (2)</td>
+                    </tr>
+                    <tr>
+                        <td colspan="5">We provide the affected community with reports on a regular basis. (3)</td>
+                    </tr>
+                    <tr>
+                        <td colspan="5">We provide the affected community with a report in the local language and in an easily understandable format on a regular basis and any time there is a significant update. (4)</td>
+                    </tr>
+                    <tr>
+                        <td colspan="5">In addition to regular reports and updates as described above, the affected community can access the current status of cases through a variety of communication channels. (5)</td>
+                    </tr>
+                    <tr>
+                        <td colspan="5" class="text-success">
+                            <b>2. The following best describes the information that we report back to affected communities:</b>
+                        </td>
+                        <td colspan="1"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="5">We do not communicate with anyone about our company’s operations. (0)</td>
+                        <td rowspan="6"><input type="number" name="q2" min="0" max="5" class="form-control" required></td>
+                    </tr>
+                    <tr>
+                        <td colspan="5">We inform the individual or group that presented a grievance about the actions taken. (1)</td>
+                    </tr>
+                    <tr>
+                        <td colspan="5">We report to affected communities on our action plans and resolution of the issues identified during the stakeholder engagement process or through our grievance mechanism. (2)</td>
+                    </tr>
+                    <tr>
+                        <td colspan="5">We regularly report on the progress of our commitments, and on those aspects of our operations that have been identified as important by the affected communities (e.g., effluents, jobs created, etc.). (3)</td>
+                    </tr>
+                    <tr>
+                        <td colspan="5">Besides reporting on the progress of our commitments and relevant aspects of our operations, we report on the outcomes and impacts of what we have put in place. (4)</td>
+                    </tr>
+                    <tr>
+                        <td colspan="5">We regularly report on the progress and impacts of our commitments, and relevant aspects of our operations. Affected communities participate in the monitoring of the commitments and aspects that they have identified as important. (5)</td>
+                    </tr>
+                    <tr>
+                        <td colspan="5" class="text-success">
+                            <b>3. The following describes the channels that we use for reporting and receiving feedback from the affected community:</b>
+                        </td>
+                        <td colspan="1"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="5">1. Meetings (reporting out and receiving feedback)</td>
+                        <td>
+                            <select name="q1" class="form-select" required>
+                                <option value="" disabled selected>Please choose an option</option>
+                                <option value="yes">Yes</option>
+                                <option value="no">No</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="5">2. Website (reporting out)</td>
+                        <td>
+                            <select name="q2" class="form-select" required>
+                                <option value="" disabled selected>Please choose an option</option>
+                                <option value="yes">Yes</option>
+                                <option value="no">No</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="5">3. Dedicated email address (receiving feedback)</td>
+                        <td>
+                            <select name="q3" class="form-select" required>
+                                <option value="" disabled selected>Please choose an option</option>
+                                <option value="yes">Yes</option>
+                                <option value="no">No</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="5">4. Dedicated phone line (receiving feedback)</td>
+                        <td>
+                            <select name="q4" class="form-select" required>
+                                <option value="" disabled selected>Please choose an option</option>
+                                <option value="yes">Yes</option>
+                                <option value="no">No</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="5">5. Town hall meetings (reporting out and receiving feedback)</td>
+                        <td>
+                            <select name="q5" class="form-select" required>
+                                <option value="" disabled selected>Please choose an option</option>
+                                <option value="yes">Yes</option>
+                                <option value="no">No</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="5">6. Presentations at forums, training workshops and conventions (reporting out)</td>
+                        <td>
+                            <select name="q6" class="form-select" required>
+                                <option value="" disabled selected>Please choose an option</option>
+                                <option value="yes">Yes</option>
+                                <option value="no">No</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="5">7. Written reports (reporting out)</td>
+                        <td>
+                            <select name="q7" class="form-select" required>
+                                <option value="" disabled selected>Please choose an option</option>
+                                <option value="yes">Yes</option>
+                                <option value="no">No</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="5">8. Direct mail (reporting out)</td>
+                        <td>
+                            <select name="q8" class="form-select" required>
+                                <option value="" disabled selected>Please choose an option</option>
+                                <option value="yes">Yes</option>
+                                <option value="no">No</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="5">9. Brochures, flyers, banners (reporting out)</td>
+                        <td>
+                            <select name="q9" class="form-select" required>
+                                <option value="" disabled selected>Please choose an option</option>
+                                <option value="yes">Yes</option>
+                                <option value="no">No</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="5">10. Advertisements in local publications (reporting out)</td>
+                        <td>
+                            <select name="q10" class="form-select" required>
+                                <option value="" disabled selected>Please choose an option</option>
+                                <option value="yes">Yes</option>
+                                <option value="no">No</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="5">11. Surveys (receiving feedback)</td>
+                        <td>
+                            <select name="q11" class="form-select" required>
+                                <option value="" disabled selected>Please choose an option</option>
+                                <option value="yes">Yes</option>
+                                <option value="no">No</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="5">a.0 of the above (0)</td>
+                        <td rowspan="6"><input type="number" name="q3" min="0" max="5" class="form-control" required></td>
+                    </tr>
+                    <tr>
+                        <td colspan="5">b. 1 of the above (1)</td>
+                    </tr>
+                    <tr>
+                        <td colspan="5">c. 2 of the above (2)</td>
+                    </tr>
+                    <tr>
+                        <td colspan="5">d. 3 of the above (3)</td>
+                    </tr>
+                    <tr>
+                        <td colspan="5">e. 4 of the above (4)</td>
+                    </tr>
+                    <tr>
+                        <td colspan="5">f. 5 or more of the above (5)</td>
+                    </tr>
+                </tbody>
+            </table>
+            <br>
+            <div id="scoreDisplay" style="display: none;">
+                <h2>Ongoing Reporting to Affected Communities - Score:</h2>
+                <p id="scoreValue"></p>
+            </div>
+            <div class="d-flex justify-content-between">
+                <button id="submitBtn" class="btn btn-primary">Submit</button>
+                <button id="cancelbtn"  class="btn btn-secondary"><a href="index.html" class="text-white text-decoration-none">Cancel</a></button>
+                <button id="nextbtn" class="btn btn-success" routerLink="/monot">Next </button>
+            </div>
+        </form>
+    </div>
+</div>

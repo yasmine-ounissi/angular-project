@@ -1,0 +1,223 @@
+<!-- app.component.html or your specific component template -->
+
+<div class="container mt-4">
+    <h1 class="mb-4">Monitoring and Review</h1>
+    
+    <div class="assessment-container">
+        <form id="monoform" (submit)="onSubmit($event)" class="needs-validation" novalidate>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th colspan="5">Monitoring and Review</th>
+                        <th>Company Self-Assessment</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td colspan="5" class="text-success"><strong>1. The following best describes our monitoring plan:</strong></td>
+                        <td colspan="2"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="5">Normally we do not have a requirement for monitoring our environmental and social (i.e. OHS, human resources, community) performance. If a problem arises, people in that area will monitor the situation. (0)</td>
+                        <td rowspan="6"><input type="number" name="q1" min="0" max="5" class="form-control" required></td>
+                    </tr>
+                    <tr>
+                        <td colspan="5">We don't have a monitoring plan but some information is recorded to verify our compliance with legal requirements. (1)</td>
+                    </tr>
+                    <tr>
+                        <td colspan="5">We have a monitoring plan for some of the critical areas selected by our managers and supervisors. (2)</td>
+                    </tr>
+                    <tr>
+                        <td colspan="5">Our monitoring plan is linked to our environmental and social risk assessment, which is reviewed periodically. Monitoring is done for all areas having a potential risk. (3)</td>
+                    </tr>
+                    <tr>
+                        <td colspan="5">Our monitoring plan covers all areas having a potential risk. Besides indicators, the plan includes procedures and assigned responsibilities for the recording, analysis, and reporting of results. (4)</td>
+                    </tr>
+                    <tr>
+                        <td colspan="5">Besides the monitoring plan described above, we have trained internal or external auditors that conduct regular audits and inspections for which we have identified a set of environmental and social criteria. (5)</td>
+                    </tr>
+                    <tr>
+                        <td colspan="5" class="text-success"><strong>2. The following best describes how we use our monitoring results:</strong></td>
+                        <td colspan="2"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="5">We do not monitor our environmental or social performance. (0)</td>
+                        <td rowspan="6"><input type="number" name="q2" min="0" max="5" class="form-control" required></td>
+                    </tr>
+                    <tr>
+                        <td colspan="5">We only collect and analyze information to verify compliance with regulatory requirements. (1)</td>
+                    </tr>
+                    <tr>
+                        <td colspan="5">Besides verifying regulatory compliance, we track our environmental and social performance. (2)</td>
+                    </tr>
+                    <tr>
+                        <td colspan="5">Besides verifying regulatory compliance, we track our environmental and social performance. We identify areas of under-performance and take suitable corrective/preventive actions to address them. (3)</td>
+                    </tr>
+                    <tr>
+                        <td colspan="5">Besides verifying regulatory compliance, we track our environmental and social performance. We identify areas of under-performance and take suitable corrective/preventive actions to address them and continually improve our environmental and social management system. (4)</td>
+                    </tr>
+                    <tr>
+                        <td colspan="5">Besides the system described above, senior management sets annual improvement plans with progressive environmental and social performance targets. (5)</td>
+                    </tr>
+                    <tr>
+                        <td colspan="5" class="text-success"><strong>3. We use the following resources and methods to monitor our environmental and social performance:</strong></td>
+                        <td colspan="2"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="5">1. Use calibrated testing and measuring devices</td>
+                        <td><select name="q1" class="form-select" required>
+                            <option value="" disabled selected>Please choose an option</option>
+                            <option value="yes">Yes</option>
+                            <option value="no">No</option>
+                            <option value="na">Not Applicable</option>
+                        </select></td>
+                    </tr>
+                    <tr>
+                        <td colspan="5">2. Review documents and records (e.g. policies, procedures, employment contracts, payslips, timecards, complaint logs, utility bills, water meter logs, records of purchased chemicals, training records)</td>
+                        <td><select name="q2" class="form-select" required>
+                            <option value="" disabled selected>Please choose an option</option>
+                            <option value="yes">Yes</option>
+                            <option value="no">No</option>
+                            <option value="na">Not Applicable</option>
+                        </select></td>
+                    </tr>
+                    <tr>
+                        <td colspan="5">3. Review labor inspection records</td>
+                        <td><select name="q3" class="form-select" required>
+                            <option value="" disabled selected>Please choose an option</option>
+                            <option value="yes">Yes</option>
+                            <option value="no">No</option>
+                            <option value="na">Not Applicable</option>
+                        </select></td>
+                    </tr>
+                    <tr>
+                        <td colspan="5">4. Review environmental inspection records</td>
+                        <td><select name="q4" class="form-select" required>
+                            <option value="" disabled selected>Please choose an option</option>
+                            <option value="yes">Yes</option>
+                            <option value="no">No</option>
+                            <option value="na">Not Applicable</option>
+                        </select></td>
+                    </tr>
+                    <tr>
+                        <td colspan="5">5. Conduct physical inspections of our facility</td>
+                        <td><select name="q5" class="form-select" required>
+                            <option value="" disabled selected>Please choose an option</option>
+                            <option value="yes">Yes</option>
+                            <option value="no">No</option>
+                            <option value="na">Not Applicable</option>
+                        </select></td>
+                    </tr>
+                    <tr>
+                        <td colspan="5">6. Surveys and questionnaires</td>
+                        <td><select name="q6" class="form-select" required>
+                            <option value="" disabled selected>Please choose an option</option>
+                            <option value="yes">Yes</option>
+                            <option value="no">No</option>
+                            <option value="na">Not Applicable</option>
+                        </select></td>
+                    </tr>
+                    <tr>
+                        <td colspan="5">7. Talk to workers</td>
+                        <td><select name="q7" class="form-select" required>
+                            <option value="" disabled selected>Please choose an option</option>
+                            <option value="yes">Yes</option>
+                            <option value="no">No</option>
+                            <option value="na">Not Applicable</option>
+                        </select></td>
+                    </tr>
+                    <tr>
+                        <td colspan="5">8. Talk to managers and supervisors</td>
+                        <td><select name="q8" class="form-select" required>
+                            <option value="" disabled selected>Please choose an option</option>
+                            <option value="yes">Yes</option>
+                            <option value="no">No</option>
+                            <option value="na">Not Applicable</option>
+                        </select></td>
+                    </tr>
+                    <tr>
+                        <td colspan="5">9. Talk to affected communities</td>
+                        <td><select name="q9" class="form-select" required>
+                            <option value="" disabled selected>Please choose an option</option>
+                            <option value="yes">Yes</option>
+                            <option value="no">No</option>
+                            <option value="na">Not Applicable</option>
+                        </select></td>
+                    </tr>
+                    <tr>
+                        <td colspan="5">10. Ask customers to share guidance</td>
+                        <td><select name="q10" class="form-select" required>
+                            <option value="" disabled selected>Please choose an option</option>
+                            <option value="yes">Yes</option>
+                            <option value="no">No</option>
+                            <option value="na">Not Applicable</option>
+                        </select></td>
+                    </tr>
+                    <tr>
+                        <td colspan="5">11. Seek advice from external consultants and experts</td>
+                        <td><select name="q11" class="form-select" required>
+                            <option value="" disabled selected>Please choose an option</option>
+                            <option value="yes">Yes</option>
+                            <option value="no">No</option>
+                            <option value="na">Not Applicable</option>
+                        </select></td>
+                    </tr>
+                    <tr>
+                        <td colspan="5">We do not monitor our environmental and social performance. (0)</td>
+                        <td rowspan="6"><input type="number" name="q3" min="0" max="5" class="form-control" required></td>
+                    </tr>
+                    <tr>
+                        <td colspan="5">We use 1-2 of the resources above. (1)</td>
+                    </tr>
+                    <tr>
+                        <td colspan="5">We use 3-4 of the resources above. (2)</td>
+                    </tr>
+                    <tr>
+                        <td colspan="5">We use 5-6 of the resources above. (3)</td>
+                    </tr>
+                    <tr>
+                        <td colspan="5">We use 7-8 of the resources above. (4)</td>
+                    </tr>
+                    <tr>
+                        <td colspan="5">We use 9 or more of the resources above. (5)</td>
+                    </tr>
+                    <tr>
+                        <td colspan="5" class="text-success"><strong>4. The following best describes senior management involvement in the review of our environmental and social management system:</strong></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td colspan="5">We do not monitor our environmental and social performance. (0)</td>
+                        <td rowspan="6"><input type="number" name="q4" min="0" max="5" class="form-control" required></td>
+                    </tr>
+                    <tr>
+                        <td colspan="5">Monitoring results are handled by the managers of respective departments. Business or operational planning is normally independent of environmental and social performance results. (1)</td>
+                    </tr>
+                    <tr>
+                        <td colspan="5">Senior management periodically receives information summarizing our environmental and social performance and progress in the implementation of our action plans. (2)</td>
+                    </tr>
+                    <tr>
+                        <td colspan="5">Senior management regularly meets to review our environmental and social performance and progress in the implementation of our action plans. (3)</td>
+                    </tr>
+                    <tr>
+                        <td colspan="5">Senior management regularly meets to review the effectiveness of our environmental and social management system. They analyze the areas of under-performance and assign the necessary resources to take suitable corrective/preventive actions. (4)</td>
+                    </tr>
+                    <tr>
+                        <td colspan="5">Besides the management system review as described above, senior management sets annual improvement plans with progressive environmental and social performance targets and includes them as an official part of our annual business planning process. (5)</td>
+                    </tr>
+                </tbody>
+            </table>
+            <br>
+            <div id="scoreDisplay" style="display: none;">
+                <h2>Monitoring and Review - Score:</h2>
+                <p id="scoreValue"></p>
+            </div>
+            <div class="d-flex justify-content-between">
+                <button id="submitBtn" class="btn btn-primary">Submit</button>
+                <button id="cancelbtn" class="btn btn-secondary"><a href="index.html" class="text-white text-decoration-none">Cancel</a>
+                </button>
+            <button type="button" id="nextbtn" class="btn btn-success" routerLink="/result" class="text-white text-decoration-none">Next
+            </button>
+        </div>
+        </form>
+    </div>
+</div>

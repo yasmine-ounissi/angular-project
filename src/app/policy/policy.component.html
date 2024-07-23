@@ -1,0 +1,193 @@
+<div class="container">
+    <h1>Policy Assessment</h1>
+    <div class="assessment-container">
+        <form [formGroup]="policyForm" id="policyForm" class="needs-validation" novalidate>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th colspan="3">Policy Description</th>
+                        <th>Assessment</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td colspan="3" class="text-success"><b>1. The following best describes our policy on environmental objectives and principles:</b></td>
+                        <td colspan="2"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">We do not have any policies regarding our environmental and social objectives and principles. (0)</td>
+                        <td colspan="1" rowspan="6"><input type="number" class="form-control" formControlName="q1" min="0" max="5" required></td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">We are in the process of developing policies regarding our environmental and social objectives and principles. (1)</td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">We have policies regarding environmental issues that are most common in our industry and region. (2)</td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">We have policies that align with the environmental code of conduct and standards of our customers or lenders. (3)</td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">We have policies that align with the environmental code of conduct and standards of our customers or lenders, including a management system requirement. (4)</td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">We have policies that align with the environmental code of conduct and standards of our customers or lenders, including a management system requirement. We have a documented process to periodically review and revise our policies. (5)</td>
+                    </tr>
+                    <tr>
+                        <td colspan="3" class="text-success"><b>2. The following best describes our policy on occupational health and safety:</b></td>
+                        <td colspan="2"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">We do not have any policies regarding our occupational health and safety objectives and principles. (0)</td>
+                        <td colspan="1" rowspan="6"><input type="number" class="form-control" formControlName="q2" min="0" max="5" required></td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">We are in the process of developing policies regarding our occupational health and safety objectives and principles. (1)</td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">We have policies regarding occupational health and safety issues that are most common in our industry and region. (2)</td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">We have policies that align with the occupational health and safety requirements of ILO or OSHA standards. (3)</td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">We have policies that align with the occupational health and safety requirements of ILO or OSHA standards, including a management system requirement. (4)</td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">We have policies that align with the occupational health and safety requirements of ILO or OSHA standards, including a management system requirement. We have a documented process to periodically review and revise our policies. (5)</td>
+                    </tr>
+                    <tr>
+                        <td colspan="3" class="text-success"><b>3. The following best describes our policy on Labor and working conditions:</b></td>
+                        <td colspan="2"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">We do not have any policies regarding our Labor and working conditions objectives and principles. (0)</td>
+                        <td colspan="1" rowspan="6"><input type="number" class="form-control" formControlName="q3" min="0" max="5" required></td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">We are in the process of developing policies regarding our Labor and working conditions objectives and principles. (1)</td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">We have policies regarding Labor and working conditions issues that are regulated by national labor law. (2)</td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">We have policies that align with the requirements of ILO conventions on labor and working conditions. (3)</td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">We have policies that align with the ILO conventions on labor and working conditions, including a management system requirement. (4)</td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">We have policies that align with the ILO conventions on labor and working conditions, including a management system requirement. We have a documented process to periodically review and revise our policies. (5)</td>
+                    </tr>
+                    <tr>
+                        <td colspan="3" class="text-success"><b>4. The following best describes our policy on community health, safety and security:</b></td>
+                        <td colspan="2"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">We do not have any policies regarding our community health, safety and security objectives and principles. (0)</td>
+                        <td colspan="1" rowspan="6"><input type="number" class="form-control" formControlName="q4" min="0" max="5" required></td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">We are in the process of developing policies regarding our community health, safety and security objectives and principles. (1)</td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">We have policies regarding community health, safety and security issues that are most common in our industry and region. (2)</td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">We have policies that align with the code of conduct and standards of our customers or lenders. (3)</td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">We have policies that align with the code of conduct and standards of our customers or lenders, including a management system requirement. (4)</td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">We have policies that align with the code of conduct and standards of our customers or lenders, including a management system requirement. We have a documented process to periodically review and revise our policies. (5)</td>
+                    </tr>
+                    <tr>
+                        <td colspan="3" class="text-success"><b>5. We review and revise our environmental and social policies as follows:</b></td>
+                        <td colspan="2"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">We do not review our policies. (0)</td>
+                        <td colspan="1" rowspan="6"><input type="number" class="form-control" formControlName="q5" min="0" max="5" required></td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">We revise our policies in reaction to external requests. (1)</td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">We revise our policies when we become aware of changes in local regulations. (2)</td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">We have a procedure to review and revise our policies based on any change in regulations or customer/lender requirements. (3)</td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">We periodically review and revise our policies based on any changes in regulations or customer/lender requirements, and the results of monitoring and review of our performance. (4)</td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">We periodically review and revise our policies based on any changes in regulations or customer/lender requirements, and the results of monitoring and review of our performance. We involve our workers and external stakeholders in the process. (5)</td>
+                    </tr>
+                    <tr>
+                        <td colspan="3" class="text-success"><b>6. The following best describes how our environmental and social policies are communicated:</b></td>
+                        <td colspan="1"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">We do not have a way to communicate environmental and social policies. (0)</td>
+                        <td colspan="1" rowspan="6"><input type="number" class="form-control" formControlName="q6" min="0" max="5" required></td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">We verbally communicate environmental and social policies in our workplace. (1)</td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">Our environmental and social policies are prominently posted in our facility and mentioned during the initial orientation for new employees. (2)</td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">Our environmental and social policies are distributed and explained to all employees, including contract and seasonal workers. (3)</td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">We communicate our environmental and social policies in all relevant languages for all employees, including contract and seasonal workers. We check to make sure that everyone understands. (4)</td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">We communicate our environmental and social policies in all relevant languages for all employees, including contract and seasonal workers, and external stakeholders. We proactively engage to make sure that everyone understands. (5)</td>
+                    </tr>
+                    <tr>
+                        <td colspan="3" class="text-success"><b>7. Based on actions by our senior management, the following statement best reflects their level of commitment to our environmental and social policies:</b></td>
+                        <td colspan="2"></td>
+                        
+                    </tr>
+                    <tr>
+                        <td colspan="3">Senior management has no awareness or involvement. (0)</td>
+                        <td colspan="1" rowspan="6"><input type="number" class="form-control" formControlName="q7" min="0" max="5" required></td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">Senior management has delegated this activity and has limited involvement. (1)</td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">Senior management communicates with lenders and customers about their requirements and then instructs the relevant employees to address the issue. (2)</td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">Senior management communicates our environmental and social policy commitment to all levels of the company and in a public statement. (3)</td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">Senior management makes a clear statement of commitment to all levels of the company and provides the necessary resources to implement the policies. (4)</td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">Senior management participates in the formal review and revision of our environmental and social policies. They provide the necessary resources to continually improve. They communicate their commitment both internally and externally. (5)</td>
+                    </tr>
+                </tbody>
+            </table>
+        </form>
+    </div>
+
+    <div id="scoreDisplay" class="d-none" *ngIf="averageScore !== null">
+        <h2>Policy Score:</h2>
+        <p id="scoreValue">Average Score: {{ averageScore.toFixed(2) }}</p>
+    </div>
+    
+    <div class="d-flex justify-content-between">
+        <button id="submitBtn" class="btn btn-primary" (click)="onSubmit($event)">Submit</button>
+        <button id="cancelbtn" class="btn btn-secondary">
+            <a href="index.html" class="text-white text-decoration-none">Cancel</a>
+        </button>
+        <button id="nextbtn" class="btn btn-success" (click)="onNext()">Next</button>
+        
+    </div>
+</div>

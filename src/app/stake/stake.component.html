@@ -1,0 +1,169 @@
+<div class="container">
+    <h1>Stakeholder Engagement</h1>
+    
+    <div class="assessment-container">
+        <form id="stakform" (submit)="onSubmit($event)" class="needs-validation" novalidate>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th colspan="5">Stakeholder Engagement</th>
+                        <th>Company self-assessment</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td colspan="5" class="text-success"><b>1. The following best describes the way that we identify the external groups that may be affected by or might influence our company:</b></td>
+                        <td colspan="1"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="5">We handle all issues internally. (0)</td>
+                        <td rowspan="6"><input type="number" name="q1" min="0" max="5" class="form-control" required></td>
+                    </tr>
+                    <tr><td colspan="5">Sometimes our investors or customers put us in touch with external groups or we get approached directly by such groups. (1)</td></tr>
+                    <tr><td colspan="5">We keep a record of the groups that contact us so that we know whom we have dealt with in the past. (2)</td></tr>
+                    <tr><td colspan="5">Our staff has conducted a stakeholder mapping exercise in which we identify our affected stakeholders. (3)</td></tr>
+                    <tr><td colspan="5">We review our stakeholder mapping with external groups to identify any other relevant groups and regularly update as our business changes. (4)</td></tr>
+                    <tr><td colspan="5">We survey our workers and outside experts as well as external groups to identify relevant groups and regularly update as our business changes. (5)</td></tr>
+                    
+                    <tr>
+                        <td colspan="5" class="text-success"><b>2. We involve external stakeholders in our environmental and social management program in the following ways:</b></td>
+                        <td colspan="1"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="5">We don’t engage with any external stakeholder. (0)</td>
+                        <td rowspan="6"><input type="number" name="q2" min="0" max="5" class="form-control" required></td>
+                    </tr>
+                    <tr><td colspan="5">External stakeholders can contact us through our external communication and grievances mechanisms. (1)</td></tr>
+                    <tr><td colspan="5">We regularly inform on our current and planned operations and the expected environmental and social positive and negative impacts. (2)</td></tr>
+                    <tr><td colspan="5">We regularly provide relevant information on our current and planned and expected impacts, so that people can express concerns and suggestions to reduce negative impacts. (3)</td></tr>
+                    <tr><td colspan="5">We provide relevant information on our plans and expected impacts, so that people can express concerns and suggestions to reduce negative impacts. Our action plans are adapted based on this exchange of information. (4)</td></tr>
+                    <tr><td colspan="5">Besides the system described above, we take specific measures so that vulnerable and marginalized groups can participate. (5)</td></tr>
+                    
+                    <tr>
+                        <td colspan="5" class="text-success"><b>3. We routinely work with the following organizations to improve our environmental and social performance:</b></td>
+                        <td colspan="1"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="5">1. Local community groups</td>
+                        <td>
+                            <select name="q1" class="form-control" required>
+                                <option value="" disabled selected>Please choose an option</option>
+                                <option value="yes">Yes</option>
+                                <option value="no">No</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="5">2. External consultants and experts</td>
+                        <td>
+                            <select name="q2" class="form-control" required>
+                                <option value="" disabled selected>Please choose an option</option>
+                                <option value="yes">Yes</option>
+                                <option value="no">No</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="5">3. Organizations focused on workers’ issues</td>
+                        <td>
+                            <select name="q3" class="form-control" required>
+                                <option value="" disabled selected>Please choose an option</option>
+                                <option value="yes">Yes</option>
+                                <option value="no">No</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="5">4. Organizations focused on environmental issues</td>
+                        <td>
+                            <select name="q4" class="form-control" required>
+                                <option value="" disabled selected>Please choose an option</option>
+                                <option value="yes">Yes</option>
+                                <option value="no">No</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="5">5. Trade unions</td>
+                        <td>
+                            <select name="q5" class="form-control" required>
+                                <option value="" disabled selected>Please choose an option</option>
+                                <option value="yes">Yes</option>
+                                <option value="no">No</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="5">6. International nongovernmental organizations</td>
+                        <td>
+                            <select name="q6" class="form-control" required>
+                                <option value="" disabled selected>Please choose an option</option>
+                                <option value="yes">Yes</option>
+                                <option value="no">No</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="5">7. Other local and national nongovernmental organizations</td>
+                        <td>
+                            <select name="q7"  class="form-control"required>
+                                <option value="" disabled selected>Please choose an option</option>
+                                <option value="yes">Yes</option>
+                                <option value="no">No</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="5">8. Consumer groups</td>
+                        <td>
+                            <select name="q8" class="form-control" required>
+                                <option value="" disabled selected>Please choose an option</option>
+                                <option value="yes">Yes</option>
+                                <option value="no">No</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="5">9. Government ministries</td>
+                        <td>
+                            <select name="q9" class="form-control" required>
+                                <option value="" disabled selected>Please choose an option</option>
+                                <option value="yes">Yes</option>
+                                <option value="no">No</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="5">10. Industry associations</td>
+                        <td>
+                            <select name="q10" class="form-control" required>
+                                <option value="" disabled selected>Please choose an option</option>
+                                <option value="yes">Yes</option>
+                                <option value="no">No</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="5">0 of the above (0)</td>
+                        <td rowspan="6"><input type="number" name="q3" min="0" max="5" class="form-control" required></td>
+                    </tr>
+                    <tr><td colspan="5">1 of the above (1)</td></tr>
+                    <tr><td colspan="5">2 of the above (2)</td></tr>
+                    <tr><td colspan="5">3 of the above (3)</td></tr>
+                    <tr><td colspan="5">4 of the above (4)</td></tr>
+                    <tr><td colspan="5">5 or more of the above (5)</td></tr>
+                </tbody>
+            </table>
+            <br>
+            <div id="scoreDisplay" style="display: none;">
+                <h2>Stakeholder Engagement - Score:</h2>
+                <p id="scoreValue"></p>
+            </div>
+            <div class="d-flex justify-content-between">
+            <button id="submitBtn" class="btn btn-primary">Submit</button>
+            <button id="cancelbtn" class="btn btn-secondary"><a href="index.html" class="text-white text-decoration-none">Cancel</a></button>
+            <button id="nextbtn" class="btn btn-success" routerLink="/grievance">Next</button>
+        </div>
+        </form>
+    </div>
+</div>

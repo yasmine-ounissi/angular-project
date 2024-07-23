@@ -1,0 +1,122 @@
+<div class="container">
+    <h1>Emergency Preparedness and Response</h1>
+    <div class="assessment-container">
+        <form id="emergencyForm" (submit)="onSubmit($event)" class="needs-validation" novalidate>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th colspan="5">Organisation Section 1</th>
+                        <th>Assessment</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td colspan="5" class="text-success"><b>1. Our emergency preparedness and response plan can best be described as:</b></td>
+                        <td colspan="2"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="5">We are aware of the potential emergency situations at our site and know how to deal with them. However, we do not have a formal plan. (0)</td>
+                        <td rowspan="6"><input type="number" name="q1" min="0" max="5" class="form-control" required></td>
+                    </tr>
+                    <tr>
+                        <td colspan="5">We have an emergency management plan that was developed by an external agency. (1)</td>
+                    </tr>
+                    <tr>
+                        <td colspan="5">Our emergency response plan was developed with external assistance, but we review it periodically for its continued suitability and adequacy, and we update it when required. (2)</td>
+                    </tr>
+                    <tr>
+                        <td colspan="5">Our employees play an active role in identification of potential emergency situations and emergency response planning. We consult external expertise when required. The emergency response plan is periodically reviewed and updated. (3)</td>
+                    </tr>
+                    <tr>
+                        <td colspan="5">All our employees across all shifts, including contract workers, are involved in emergency identification and management planning. Regular training, mock drills in all shifts, periodic review and update, and documentation/record keeping are some of the key features of our emergency response plan. Senior management has an active role in monitoring of emergency response, and we focus on continual improvement of emergency management. (4)</td>
+                    </tr>
+                    <tr>
+                        <td colspan="5">Not only do we have employees’ and contractors’ full involvement, we also focus on continued participation and communication with surrounding communities on emergency management planning. External communication channels in case of an emergency are defined. “Off-site” emergency management and “mutual aid” are key features of our emergency plan. (5)</td>
+                    </tr>
+
+                    <tr>
+                        <td colspan="5" class="text-success"><b>2. We develop practical skills for emergency response as follows:</b></td>
+                        <td colspan="2"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="5">Mock drills and exercises are conducted when necessary. (0)</td>
+                        <td rowspan="6"><input type="number" name="q2" min="0" max="5" class="form-control" required></td>
+                    </tr>
+                    <tr>
+                        <td colspan="5">Mock drills are conducted regularly. We do not conduct drills in all shifts, but we are aware of the emergency risks in the night shift. (1)</td>
+                    </tr>
+                    <tr>
+                        <td colspan="5">Mock drills are conducted in all shifts with regular frequency. Records of mock drills are maintained mostly for internal safety requirements or regulatory compliance. (2)</td>
+                    </tr>
+                    <tr>
+                        <td colspan="5">Mock drills are conducted in all shifts with regular frequency. Records and analysis of the results are documented. Performance on emergency response is monitored and evaluated to identify opportunities for potential improvements. Sometimes these findings are incorporated in our emergency management plan. (3)</td>
+                    </tr>
+                    <tr>
+                        <td colspan="5">Mock drills are conducted in all shifts with regular frequency. Mock drill reports from all shifts are evaluated and analyzed for improvement opportunities. All findings are discussed and recommendations/corrective actions are incorporated in the emergency management plan. (4)</td>
+                    </tr>
+                    <tr>
+                        <td colspan="5">There is demonstrated involvement of senior management, which normally takes part in mock drills. Senior management reviews recommendations and corrective actions resulting from the mock drill reports and provides resources to implement them promptly. (5)</td>
+                    </tr>
+
+                    <tr>
+                        <td colspan="5" class="text-success"><b>3. We train our workforce on emergency management as follows:</b></td>
+                        <td colspan="2"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="5">Basic awareness on fire safety and evacuation is part of the employee orientation program. Subsequent training is normally not required. (0)</td>
+                        <td rowspan="6"><input type="number" name="q3" min="0" max="5" class="form-control" required></td>
+                    </tr>
+                    <tr>
+                        <td colspan="5">Basic awareness on fire safety and evacuation is part of the employee orientation program. Re-training is done when necessary. (1)</td>
+                    </tr>
+                    <tr>
+                        <td colspan="5">All employees across all shifts, including contract workers, are regularly trained on life safety under common emergency scenarios (e.g. fire safety, evacuation, shelter-in-place, first aid). (2)</td>
+                    </tr>
+                    <tr>
+                        <td colspan="5">All employees across all shifts, including contract workers, are regularly trained on life safety. In addition, we have specific training requirements for emergency response teams. (3)</td>
+                    </tr>
+                    <tr>
+                        <td colspan="5">All employees across all shifts, including contract workers, are regularly trained on life safety. In addition, we have specific training requirements for emergency response teams. Managers are trained on risk identification and management. We monitor the effectiveness of emergency training. (4)</td>
+                    </tr>
+                    <tr>
+                        <td colspan="5">We have an annual emergency training program with targeted objectives for all levels and departments. We continually update our training program to cover new acquisitions and changes to operations and the surrounding environment. We adapt our training based on employee input. (5)</td>
+                    </tr>
+
+                    <tr>
+                        <td colspan="5" class="text-success"><b>4. Our system for managing our emergency detection, alarm, and response equipment can best be described as:</b></td>
+                        <td colspan="2"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="5">We have the necessary and appropriate portable fire extinguishers in the facility. (0)</td>
+                        <td rowspan="6"><input type="number" name="q4" min="0" max="5" class="form-control" required></td>
+                    </tr>
+                    <tr>
+                        <td colspan="5">The number, type and size of fire extinguishers are decided based on the risk assessment. They are maintained as per the manufacturer’s specification. (1)</td>
+                    </tr>
+                    <tr>
+                        <td colspan="5">In addition to fire extinguishers, critical areas are covered with smoke detectors and other early warning systems. We also have emergency alarms, lighting, and signage in all working areas. (2)</td>
+                    </tr>
+                    <tr>
+                        <td colspan="5">We cover all working areas with early warning systems, emergency alarms, lighting and signage, portable fire extinguishers, and pressurized water suppression systems. (3)</td>
+                    </tr>
+                    <tr>
+                        <td colspan="5">We regularly test our early warning system, alarms, and fire extinguishers. Our fire hydrant system, including the water tank, is cleaned, maintained and tested at a defined frequency. Our emergency systems are connected to an independent energy source and are operational at all times. (4)</td>
+                    </tr>
+                    <tr>
+                        <td colspan="5">Our procurement system is in line with our risk assessment and covers multi-emergency equipment, such as early warning systems, emergency alarms, lighting, and signage, first aid, and fire suppression, flood, earthquake, and chemical spills response equipment. The inventory of our emergency equipment is regularly maintained and upgraded to keep up with the new technologies and potential risks. (5)</td>
+                    </tr>
+                </tbody>
+            </table>
+            <br>
+            <div id="scoreDisplay" style="display: none;">
+                <h2>Emergency Preparedness and Response - Score:</h2>
+                <p id="scoreValue"></p>
+            </div>
+            <div class="d-flex justify-content-between">
+            <button id="submitBtn" type="submit" class="btn btn-primary">Submit</button>
+            <button id="cancelBtn" type="button" class="btn btn-secondary"><a href="index.html" class="text-white text-decoration-none">Cancel</a></button>
+            <button id="nextBtn" type="button" class="btn btn-success" routerLink="/stake">Next</button>
+        </div>
+        </form>
+    </div>
+</div>

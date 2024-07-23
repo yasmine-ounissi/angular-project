@@ -1,0 +1,75 @@
+ <div class="container-xl">
+    <h1 class="mt-5">Welcome to the ESMS Self-Assessment and Improvement Guide</h1>
+    <p>This tool was developed to assist you assess and score the maturity of your Environmental and Social Management System (ESMS).</p>
+    <p>There are nine sections of the Self-Assessment, one for each element of the ESMS as defined in IFC Performance Standard:</p>
+    <ul>
+      <li><a routerLink="/policy">Policy</a></li>
+      <li><a routerLink="/risk">Identification of Risks and Impacts</a></li>
+      <li><a routerLink="/management">Management Programs</a></li>
+      <li><a routerLink="/orga">Organizational Capacity and Competence</a></li>
+      <li><a routerLink="/emergy">Emergency Preparedness and Response</a></li>
+      <li><a routerLink="/stake">Stakeholder Engagement</a></li>
+      <li><a routerLink="/grievance">External Communications and Grievance Mechanism</a></li>
+      <li><a routerLink="/reporting">Ongoing Reporting to Affected Communities</a></li>
+      <li><a routerLink="/monot">Monitoring and Review</a></li>
+    </ul>
+    <p>There are from 3 to 9 questions in each section. Each question has six response options. Circle the response that most closely describes the situation at your company. Do not worry if there is no exact match – just pick the one that you think is closest. Answer as candidly and objectively as you can based on the current situation in your organization. Gather input from others in your company that might have knowledge about your ESMS. The purpose of this Self-Assessment is to give you an accurate measure, for your company’s own benchmarking and capacity-building purposes.</p>
+    <p>Scores are automatically entered into the Results tab where a graphic representation of your aggregate scores for the nine (9) ESMS elements will appear. When an independent assessment is carried out, the organization can compare the two scores.</p>
+    <p>After completing the Self-Assessment go to the Maturity Levels tab and read the level that corresponds to the score that you obtained. Also, the Improvement Tips tab suggests ways that you can work to move up one level.</p>
+    <p>Let’s get started. Please provide the following information and save the file as an easily recognizable document for your organization and the date of the current revision (e.g.15Oct2015).</p>
+    
+    <div class="container text-center mt-4">
+      <form id="loginForm" onsubmit="return validateForm()">
+        <div class="form-group">
+          <label for="companyName">Company Name</label>
+          <input type="text" class="form-control" id="companyName" name="companyName" required>
+        </div>
+
+        <div class="form-group">
+          <label for="sector">Sector</label>
+          <input type="text" class="form-control" id="sector" name="sector" required>
+        </div>
+
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" class="form-control" id="name" name="name" required>
+        </div>
+
+        <div class="form-group">
+          <label for="title">Title</label>
+          <input type="text" class="form-control" id="title" name="title" required>
+        </div>
+
+        <div class="form-group">
+          <label for="responsibility">Area of Responsibility</label>
+          <input type="text" class="form-control" id="responsibility" name="responsibility" required>
+        </div>
+
+        <div class="form-group">
+          <label for="telephone">Telephone Number</label>
+          <input type="tel" class="form-control" id="telephone" name="telephone" required>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" class="form-control" id="email" name="email" required>
+        </div>
+
+        <div id="staffContainer"></div>
+        <div class="form-group d-flex justify-content-between">
+            <button type="button" class="btn btn-secondary" id="addStaffButton">Add Another Team Staff</button>
+            <button type="submit" class="btn btn-primary">Continue</button>
+          </div>
+      </form>
+    </div>
+
+    <div class="team-staff mt-5">
+      <h2>Company ESMS Team Staff</h2>
+      <ul class="list-group">
+        <li class="list-group-item">John Doe - ESMS Manager</li>
+        <li class="list-group-item">Jane Smith - Environmental Specialist</li>
+        <li class="list-group-item">Mike Brown - Social Impact Analyst</li>
+      </ul>
+    </div>
+  </div>
+
