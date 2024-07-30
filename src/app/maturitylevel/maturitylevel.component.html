@@ -1,6 +1,6 @@
 <div class="container mt-4">
     <div class="assessment-container">
-        <form id="resultform">
+        <form>
             <table class="table table-bordered table-striped">
                 <thead class="thead-dark">
                     <tr>
@@ -89,11 +89,10 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <!-- Add your form elements here if needed -->
                 </tbody>
             </table>
             <div class="d-flex justify-content-between mt-4">
-                <button id="nextbtn" class="btn btn-primary" routerLink="/impritips" class="text-white text-decoration-none">Improvement Tips</button>
+                <button id="nextbtn" class="btn btn-primary" routerLink="/impritips" class="text-white text-decoration-none" (click)="onNext()">Improvement Tips</button>
             </div>
         </form>
     </div>

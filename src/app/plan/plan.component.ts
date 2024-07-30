@@ -1,13 +1,15 @@
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-plan',
   standalone: true,
-  imports: [FormsModule],
+  imports: [ReactiveFormsModule,CommonModule],
   templateUrl: './plan.component.html',
   styleUrl: './plan.component.css'
 })
 export class PlanComponent {
+  planform!:FormGroup;
 
 }

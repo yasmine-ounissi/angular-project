@@ -2,7 +2,7 @@
     <h1>Identification of Risks and Impacts</h1>
     
     <div class="assessment-container mt-4">
-      <form [formGroup]="riskForm" (submit)="onSubmit($event)" class="needs-validation" novalidate>
+      <form [formGroup]="riskForm" (ngSubmit)="onSubmit()" novalidate>
         <table class="table table-bordered">
           <thead class="thead-light">
             <tr>
@@ -141,7 +141,8 @@
             <tr>
               <td colspan="5">We do not do a risk assessment. (0)</td>
               <td rowspan="6">
-                <input type="number" formControlName="q1" min="0" max="5" class="form-control" required>
+                <input type="number" formControlName="q12" min="0" max="5" class="form-control" required>
+                <div class="text-muted mt-2">Based on your selected options, please choose the number of the question.</div>
               </td>
               <td rowspan="6"></td>
             </tr>
@@ -167,7 +168,7 @@
             <tr>
               <td colspan="5">1-Fire and explosion hazard </td>
               <td>
-                <select formControlName="q12" class="form-control" required>
+                <select formControlName="q13" class="form-control" required>
                   <option value="" disabled selected>Please choose an option</option>
                   <option value="yes">Yes</option>
                   <option value="no">No</option>
@@ -179,7 +180,7 @@
             <tr>
               <td colspan="5">2-Physical hazards (e.g. cuts, falls, rotating/moving equipment, vibration)</td>
               <td>
-                <select formControlName="q13" class="form-control" required>
+                <select formControlName="q14" class="form-control" required>
                   <option value="" disabled selected>Please choose an option</option>
                   <option value="yes">Yes</option>
                   <option value="no">No</option>
@@ -190,7 +191,7 @@
             <tr>
               <td colspan="5">3-Ergonomic hazards (e.g. lifting, repetitive work, work posture, injuries)</td>
               <td>
-                <select formControlName="q14" class="form-control" required>
+                <select formControlName="q15" class="form-control" required>
                   <option value="" disabled selected>Please choose an option</option>
                   <option value="yes">Yes</option>
                   <option value="no">No</option>
@@ -201,7 +202,7 @@
             <tr>
               <td colspan="5">4-Chemical hazards</td>
               <td>
-                <select formControlName="q15" class="form-control" required>
+                <select formControlName="q16" class="form-control" required>
                   <option value="" disabled selected>Please choose an option</option>
                   <option value="yes">Yes</option>
                   <option value="no">No</option>
@@ -210,7 +211,7 @@
                             </td></tr>
                           <tr> <td colspan="5">5-Bio hazards</td>
                             <td>
-                                <select formControlName="q7" class="form-control" required>
+                                <select formControlName="q17" class="form-control" required>
                                     <option value="" disabled selected>Please choose an option</option>
                                     <option value="yes">Yes</option>
                                     <option value="no">No</option>
@@ -219,7 +220,7 @@
                             </td></tr> 
                           <tr>  <td colspan="5">6-Radiation hazards</td>
                             <td>
-                                <select formControlName="q6" class="form-control" required>
+                                <select formControlName="q18" class="form-control" required>
                                     <option value="" disabled selected>Please choose an option</option>
                                     <option value="yes">Yes</option>
                                     <option value="no">No</option>
@@ -228,7 +229,7 @@
                             </td></tr> 
                           <tr>  <td colspan="5">7-Electrical hazards</td>
                             <td>
-                                <select formControlName="q7" class="form-control" required>
+                                <select formControlName="q19" class="form-control" required>
                                     <option value="" disabled selected>Please choose an option</option>
                                     <option value="yes">Yes</option>
                                     <option value="no">No</option>
@@ -237,7 +238,7 @@
                             </td></tr> 
                           <tr>  <td colspan="5">8-Work zone air quality</td>
                             <td>
-                                <select formControlName="q8" class="form-control" required>
+                                <select formControlName="q20" class="form-control" required>
                                     <option value="" disabled selected>Please choose an option</option>
                                     <option value="yes">Yes</option>
                                     <option value="no">No</option>
@@ -246,7 +247,7 @@
                             </td></tr> 
                           <tr>  <td colspan="5">9-Work zone noise level</td>
                             <td>
-                                <select formControlName="q9" class="form-control" required>
+                                <select formControlName="q21" class="form-control" required>
                                     <option value="" disabled selected>Please choose an option</option>
                                     <option value="yes">Yes</option>
                                     <option value="no">No</option>
@@ -255,7 +256,7 @@
                             </td></tr> 
                           <tr>   <td colspan="5">10-Eye hazards</td>
                             <td>
-                                <select formControlName="q10" class="form-control" required>
+                                <select formControlName="q22" class="form-control" required>
                                     <option value="" disabled selected>Please choose an option</option>
                                     <option value="yes">Yes</option>
                                     <option value="no">No</option>
@@ -264,7 +265,7 @@
                             </td></tr> 
                           <tr>   <td colspan="5">11-Workplace temperature and humidity</td>
                             <td>
-                                <select formControlName="q11" class="form-control" required>
+                                <select formControlName="q23" class="form-control" required>
                                     <option value="" disabled selected>Please choose an option</option>
                                     <option value="yes">Yes</option>
                                     <option value="no">No</option>
@@ -273,7 +274,7 @@
                             </td></tr> 
                           <tr>  <td colspan="5">12-Working at heights</td>
                             <td>
-                                <select formControlName="q12" class="form-control" required>
+                                <select formControlName="q24" class="form-control" required>
                                     <option value="" disabled selected>Please choose an option</option>
                                     <option value="yes">Yes</option>
                                     <option value="no">No</option>
@@ -282,7 +283,7 @@
                             </td></tr> 
                           <tr>  <td colspan="5">13-Working in confined spaces</td>
                             <td>
-                                <select formControlName="q13" class="form-control" required>
+                                <select formControlName="q25" class="form-control" required>
                                     <option value="" disabled selected>Please choose an option</option>
                                     <option value="yes">Yes</option>
                                     <option value="no">No</option>
@@ -291,7 +292,7 @@
                             </td></tr> 
                           <tr>   <td colspan="5">14-Industrial vehicle driving and site traffic</td>
                             <td>
-                                <select formControlName="q14" class="form-control" required>
+                                <select formControlName="q26" class="form-control" required>
                                     <option value="" disabled selected>Please choose an option</option>
                                     <option value="yes">Yes</option>
                                     <option value="no">No</option>
@@ -300,7 +301,7 @@
                             </td></tr> 
                           <tr>   <td colspan="5">15-Transportation of workers</td>
                             <td>
-                                <select formControlName="q15" class="form-control" required>
+                                <select formControlName="q27" class="form-control" required>
                                     <option value="" disabled selected>Please choose an option</option>
                                     <option value="yes">Yes</option>
                                     <option value="no">No</option>
@@ -309,7 +310,8 @@
                             </td></tr> 
                           <tr>
                             <td colspan="5">we do not do a risk assessment.(0)</td>
-                            <td rowspan="6"><input type="number" formControlName="q2" min="0" max="5" class="form-control" required></td>
+                            <td rowspan="6"><input type="number" formControlName="q28" min="0" max="5" class="form-control" required>
+                              <div class="text-muted mt-2">Based on your selected options, please choose the number of the question.</div></td>
                             <td rowspan="6"></td></tr>
                             <tr><td colspan="5"> Our risk assessment covers at least 3 of the topics above.(1)</td></tr>
                             <tr><td colspan="5"> Our risk assessment covers 4-7 of the topics above.(2)</td></tr>
@@ -330,7 +332,7 @@
                             <td colspan="5">1-Age profiles of workforce</td>
                            
                             <td>
-                                <select formControlName="q1" class="form-control" required>
+                                <select formControlName="q29" class="form-control" required>
                                     <option value="" disabled selected>Please choose an option</option>
                                     <option value="yes">Yes</option>
                                     <option value="no">No</option>
@@ -341,7 +343,7 @@
                         </tr>
                          <tr><td colspan="5">2-Gender composition of workforce</td>
                             <td>
-                                <select formControlName="q2" class="form-control" required>
+                                <select formControlName="q30" class="form-control" required>
                                     <option value="" disabled selected>Please choose an option</option>
                                     <option value="yes">Yes</option>
                                     <option value="no">No</option>
@@ -350,7 +352,7 @@
                             </td> </tr>
                            <tr><td colspan="5">3-Presence of dormitories</td>
                             <td>
-                                <select formControlName="q3" class="form-control" required>
+                                <select formControlName="q31" class="form-control" required>
                                     <option value="" disabled selected>Please choose an option</option>
                                     <option value="yes">Yes</option>
                                     <option value="no">No</option>
@@ -359,7 +361,7 @@
                             </td></tr> 
                            <tr> <td colspan="5">4-Differences in nationalities/ethnicities</td>
                             <td>
-                                <select formControlName="q4" class="form-control" required>
+                                <select formControlName="q32" class="form-control" required>
                                     <option value="" disabled selected>Please choose an option</option>
                                     <option value="yes">Yes</option>
                                     <option value="no">No</option>
@@ -368,7 +370,7 @@
                             </td> </tr>
                           <tr> <td colspan="5">5-Use of security guards</td>
                             <td>
-                                <select formControlName="q5" class="form-control" required>
+                                <select formControlName="q33" class="form-control" required>
                                     <option value="" disabled selected>Please choose an option</option>
                                     <option value="yes">Yes</option>
                                     <option value="no">No</option>
@@ -377,7 +379,7 @@
                             </td></tr> 
                           <tr>  <td colspan="5">6-Use of migrant labor</td>
                             <td>
-                                <select formControlName="q6" class="form-control" required>
+                                <select formControlName="q34" class="form-control" required>
                                     <option value="" disabled selected>Please choose an option</option>
                                     <option value="yes">Yes</option>
                                     <option value="no">No</option>
@@ -386,7 +388,7 @@
                             </td></tr> 
                           <tr>  <td colspan="5">7-Use of temporary, seasonal, and contract labor, on- or off-site</td>
                             <td>
-                                <select formControlName="q7" class="form-control" required>
+                                <select formControlName="q35" class="form-control" required>
                                     <option value="" disabled selected>Please choose an option</option>
                                     <option value="yes">Yes</option>
                                     <option value="no">No</option>
@@ -395,7 +397,7 @@
                             </td></tr> 
                           <tr>  <td colspan="5">8-Use of apprenticeship programs</td>
                             <td>
-                                <select formControlName="q8" class="form-control" required>
+                                <select formControlName="q36" class="form-control" required>
                                     <option value="" disabled selected>Please choose an option</option>
                                     <option value="yes">Yes</option>
                                     <option value="no">No</option>
@@ -404,7 +406,7 @@
                             </td></tr> 
                           <tr>  <td colspan="5">9-Use of production-quota-based pay systems</td>
                             <td>
-                                <select formControlName="q9" class="form-control" required>
+                                <select formControlName="q37" class="form-control" required>
                                     <option value="" disabled selected>Please choose an option</option>
                                     <option value="yes">Yes</option>
                                     <option value="no">No</option>
@@ -413,7 +415,7 @@
                             </td></tr> 
                           <tr>   <td colspan="5">10-Use of recruiting or labor contracting agencies</td>
                             <td>
-                                <select formControlName="q10" class="form-control"required>
+                                <select formControlName="q38" class="form-control"required>
                                     <option value="" disabled selected>Please choose an option</option>
                                     <option value="yes">Yes</option>
                                     <option value="no">No</option>
@@ -422,7 +424,7 @@
                             </td></tr> 
                           <tr>   <td colspan="5">11-Presence of worker representatives</td>
                             <td>
-                                <select formControlName="q11" class="form-control" required>
+                                <select formControlName="q39" class="form-control" required>
                                     <option value="" disabled selected>Please choose an option</option>
                                     <option value="yes">Yes</option>
                                     <option value="no">No</option>
@@ -431,7 +433,9 @@
                             </td></tr> 
                           <tr>
                           <td colspan="5">we do not do a risk assessment.(0) </td>
-                          <td rowspan="6"><input type="number" formControlName="q3" min="0" max="5" class="form-control" required></td>
+                          <td rowspan="6"><input type="number" formControlName="q40" min="0" max="5" class="form-control" required>
+                            <div class="text-muted mt-2">Based on your selected options, please choose the number of the question.</div></td>
+
                           <td rowspan="6"></td></tr>
                           <tr> <td colspan="5"> Our risk assessment covers at least 3 of the topics above.(1)</td> </tr>
                           <tr> <td colspan="5">Our risk assessment covers 4-5 of the topics above.(2)</td> </tr>
@@ -450,7 +454,7 @@
                             <td colspan="5">1-Contamination of surface water bodies(rivers,lakes,estuaries,etc)</td>
                            
                             <td>
-                                <select formControlName="q1" class="form-control" required>
+                                <select formControlName="q41" class="form-control" required>
                                     <option value="" disabled selected>Please choose an option</option>
                                     <option value="yes">Yes</option>
                                     <option value="no">No</option>
@@ -461,7 +465,7 @@
                         </tr>
                          <tr><td colspan="5">2-Ambient air quality/odor from industriel emissions</td>
                             <td>
-                                <select formControlName="q2" class="form-control" required>
+                                <select formControlName="q42" class="form-control" required>
                                     <option value="" disabled selected>Please choose an option</option>
                                     <option value="yes">Yes</option>
                                     <option value="no">No</option>
@@ -470,7 +474,7 @@
                             </td> </tr>
                            <tr><td colspan="5">3-Solid waste disposal</td>
                             <td>
-                                <select formControlName="q3" class="form-control" required>
+                                <select formControlName="q43" class="form-control" required>
                                     <option value="" disabled selected>Please choose an option</option>
                                     <option value="yes">Yes</option>
                                     <option value="no">No</option>
@@ -479,7 +483,7 @@
                             </td></tr> 
                            <tr> <td colspan="5">4-Hazardous wasre disposal</td>
                             <td>
-                                <select formControlName="q4" class="form-control" required>
+                                <select formControlName="q44" class="form-control" required>
                                     <option value="" disabled selected>Please choose an option</option>
                                     <option value="yes">Yes</option>
                                     <option value="no">No</option>
@@ -488,7 +492,7 @@
                             </td> </tr>
                           <tr> <td colspan="5">5-Usage of chemicals and hazardous materials</td>
                             <td>
-                                <select formControlName="q5" class="form-control" required>
+                                <select formControlName="q45" class="form-control" required>
                                     <option value="" disabled selected>Please choose an option</option>
                                     <option value="yes">Yes</option>
                                     <option value="no">No</option>
@@ -497,7 +501,7 @@
                             </td></tr> 
                           <tr>  <td colspan="5">6-Ground of surface water depletion</td>
                             <td>
-                                <select formControlName="q6" class="form-control"required>
+                                <select formControlName="q46" class="form-control"required>
                                     <option value="" disabled selected>Please choose an option</option>
                                     <option value="yes">Yes</option>
                                     <option value="no">No</option>
@@ -506,7 +510,7 @@
                             </td></tr> 
                           <tr>  <td colspan="5">7-High ambient noise level due to industriel operations </td>
                             <td>
-                                <select formControlName="q7" class="form-control" required>
+                                <select formControlName="q47" class="form-control" required>
                                     <option value="" disabled selected>Please choose an option</option>
                                     <option value="yes">Yes</option>
                                     <option value="no">No</option>
@@ -515,7 +519,7 @@
                             </td></tr> 
                           <tr>  <td colspan="5">8-Ground water contanimation</td>
                             <td>
-                                <select formControlName="q8" class="form-control" required>
+                                <select formControlName="q48" class="form-control" required>
                                     <option value="" disabled selected>Please choose an option</option>
                                     <option value="yes">Yes</option>
                                     <option value="no">No</option>
@@ -524,7 +528,7 @@
                             </td></tr> 
                           <tr>  <td colspan="5">9-Air emissions and noise orom transportation</td>
                             <td>
-                                <select formControlName="q9" class="form-control" required>
+                                <select formControlName="q49" class="form-control" required>
                                     <option value="" disabled selected>Please choose an option</option>
                                     <option value="yes">Yes</option>
                                     <option value="no">No</option>
@@ -533,7 +537,7 @@
                             </td></tr> 
                           <tr>   <td colspan="5">10-Traffic congestion</td>
                             <td>
-                                <select formControlName="q10" class="form-control" required>
+                                <select formControlName="q50" class="form-control" required>
                                     <option value="" disabled selected>Please choose an option</option>
                                     <option value="yes">Yes</option>
                                     <option value="no">No</option>
@@ -542,7 +546,7 @@
                             </td></tr> 
                           <tr>   <td colspan="5">11-Cultural heritage site/historical monuments/escologically sensitive</td>
                             <td>
-                                <select formControlName="q11" class="form-control" required>
+                                <select formControlName="q51" class="form-control" required>
                                     <option value="" disabled selected>Please choose an option</option>
                                     <option value="yes">Yes</option>
                                     <option value="no">No</option>
@@ -551,7 +555,7 @@
                             </td></tr> 
                           <tr>  <td colspan="5">12-Land acquisition and Usage</td>
                             <td>
-                                <select formControlName="q12" class="form-control" required>
+                                <select formControlName="q52" class="form-control" required>
                                     <option value="" disabled selected>Please choose an option</option>
                                     <option value="yes">Yes</option>
                                     <option value="no">No</option>
@@ -560,7 +564,7 @@
                             </td></tr> 
                           <tr>  <td colspan="5">13-Buildings and infrastructure developement/decommissioning</td>
                             <td>
-                                <select formControlName="q13" class="form-control" required>
+                                <select formControlName="q53" class="form-control" required>
                                     <option value="" disabled selected>Please choose an option</option>
                                     <option value="yes">Yes</option>
                                     <option value="no">No</option>
@@ -569,7 +573,7 @@
                             </td></tr> 
                           <tr>   <td colspan="5">14-Security personnel</td>
                             <td>
-                                <select formControlName="q14" class="form-control" required>
+                                <select formControlName="q54" class="form-control" required>
                                     <option value="" disabled selected>Please choose an option</option>
                                     <option value="yes">Yes</option>
                                     <option value="no">No</option>
@@ -578,7 +582,8 @@
                             </td></tr> 
                           <tr>
                           <td colspan="5">we do not do a risk assessment.(0) </td>
-                          <td rowspan="6"><input type="number" formControlName="q4" min="0" max="5" class="form-control" required></td>
+                          <td rowspan="6"><input type="number" formControlName="q55" min="0" max="5" class="form-control" required>
+                            <div class="text-muted mt-2">Based on your selected options, please choose the number of the question.</div></td>
                           <td rowspan="6"></td></tr>
                           <tr> <td colspan="5"> Our risk assessment covers at least 4 of the topics above.(1)</td> </tr>
                           <tr> <td colspan="5">Our risk assessment covers 5-7 of the topics above.(2)</td> </tr>
@@ -593,7 +598,7 @@
                         </tr>
                         <tr>
                             <td colspan="5">We do  not conduct an environmental risk assessment.(0)</td>
-                            <td rowspan="6"><input type="number" formControlName="q3" min="0" max="5" class="form-control" required></td>
+                            <td rowspan="6"><input type="number" formControlName="q56" min="0" max="5" class="form-control" required></td>
                             <td rowspan="6"></td></tr>
                          <tr><td colspan="5">We do not have a formal method but we are aware of the environmental regulations that apply to our operations.(1)</td> </tr>
                            <tr><td colspan="5">We look at inputs and outputs of all of our business processses to assess environmental risks.(2)</td></tr> 
@@ -609,7 +614,7 @@
                             <td colspan="2"></td>
                         </tr>
                        <tr> <td colspan="5">We do not conduct an occupational health and safety risk assessemnt.(0)</td>
-                        <td rowspan="6"><input type="number" formControlName="q6" min="0" max="5" class="form-control" required></td>
+                        <td rowspan="6"><input type="number" formControlName="q57" min="0" max="5" class="form-control" required></td>
                         <td rowspan="6"></td>
                         </tr>
                        <tr> <td colspan="5"> We do not have a formal method but we are aware of some of the occupational health and safety risks.(1)</td></tr>
@@ -619,7 +624,7 @@
                        <tr> <td colspan="5">we look at all of our business processes to assess occupational health and safett risks,including those involving contractors primary suppliers.we have a risk evalution and prioritization method.the risk assessemnt is reviewed for its adequacy on a periodic basis and whenever we have in processes and activities,or an expansion.(5)</td></tr>
                        <tr>
                         <td colspan="5">We do  not conduct a labor risk assessment.(0)</td>
-                        <td rowspan="6"><input type="number" formControlName="q4" min="0" max="5" class="form-control"required></td>
+                        <td rowspan="6"><input type="number" formControlName="q58" min="0" max="5" class="form-control"required></td>
                     <td rowspan="6"></td>
                 </tr>
                      <tr><td colspan="5">We do not have a formal method but we are aware of some of the labor risks.(1)</td> </tr>
@@ -640,7 +645,7 @@
                         </tr>
                         <tr>
                             <td colspan="5">We do  not conduct any risk assessment.(0)</td>
-                            <td rowspan="6"><input type="number" formControlName="q7" min="0" max="5" class="form-control" required></td>
+                            <td rowspan="6"><input type="number" formControlName="q59" min="0" max="5" class="form-control" required></td>
                             <td rowspan="6"></td></tr>
                          <tr><td colspan="5">The manager of each area conduct the risk identification and assessment indepently.(1)</td> </tr>
                            <tr><td colspan="5">the maangers of each area conduct the risk identification and asessement indepently.supervisors and worker representatives participte in the identification of Risks.(2)</td></tr> 
@@ -648,18 +653,19 @@
                            <tr> <td>A committee involving multiple departments jointly conducts the identification of all environmental and social risks.  Supervisors and worker representatives participate in the identification of risks.  The committee proactively engages external experts, contractors and primary suppliers.(4) </td></tr>
                           <tr> <td colspan="5">A committee involving multiple departments jointly conducts the identification of all environmental and social risks.  Supervisors and worker representatives participate in the identification of risks.  The committee proactively engages external experts, contractors, primary suppliers and other external stakeholders for the identification of risks.(5)</td></tr>
           
-                     
+                     +
                     </tbody>
                 </table>
                 <br>
-                <div id="scoreDisplay" style="display: none;" class="d-none">
-                    <h2>Risk Scores:</h2>
-                    <p id="scoreValue"></p>
+                <div *ngIf="showScore">
+                  <h2>risk Assessment - Score:</h2>
+                  <p>Total Scores: {{ totalScore }}</p>
+                  <p>Average Score: {{ averageScore }}</p>
                 </div>
                 <div class="d-flex justify-content-between">
-                <button id="submitBtn" class="btn btn-primary">Submit</button>
+                  <button type="submit" [disabled]="!riskForm.valid" class="btn btn-primary">Submit</button>
                 <button id="cancelbtn" class="btn btn-secondary"><a href="index.html" class="text-white text-decoration-none">Cancel</a></button>
-                <button id="nextbtn" class="btn btn-success" routerLink="/management">Next</button>
+                <button type="button" class="btn btn-success" routerLink="/management" (click)="onNext()">Next</button>
                 </div>
             </form>
         </div>

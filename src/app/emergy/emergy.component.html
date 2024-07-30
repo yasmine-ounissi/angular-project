@@ -1,7 +1,7 @@
 <div class="container">
     <h1>Emergency Preparedness and Response</h1>
     <div class="assessment-container">
-        <form id="emergencyForm" (submit)="onSubmit($event)" class="needs-validation" novalidate>
+        <form [formGroup]="emergencyForm" (ngSubmit)="onSubmit()" class="needs-validation" novalidate>
             <table class="table table-bordered">
                 <thead>
                     <tr>
@@ -16,7 +16,7 @@
                     </tr>
                     <tr>
                         <td colspan="5">We are aware of the potential emergency situations at our site and know how to deal with them. However, we do not have a formal plan. (0)</td>
-                        <td rowspan="6"><input type="number" name="q1" min="0" max="5" class="form-control" required></td>
+                        <td rowspan="6"><input type="number" formControlName="q1" min="0" max="5" class="form-control" required></td>
                     </tr>
                     <tr>
                         <td colspan="5">We have an emergency management plan that was developed by an external agency. (1)</td>
@@ -40,7 +40,7 @@
                     </tr>
                     <tr>
                         <td colspan="5">Mock drills and exercises are conducted when necessary. (0)</td>
-                        <td rowspan="6"><input type="number" name="q2" min="0" max="5" class="form-control" required></td>
+                        <td rowspan="6"><input type="number" formControlName="q2" min="0" max="5" class="form-control" required></td>
                     </tr>
                     <tr>
                         <td colspan="5">Mock drills are conducted regularly. We do not conduct drills in all shifts, but we are aware of the emergency risks in the night shift. (1)</td>
@@ -64,7 +64,7 @@
                     </tr>
                     <tr>
                         <td colspan="5">Basic awareness on fire safety and evacuation is part of the employee orientation program. Subsequent training is normally not required. (0)</td>
-                        <td rowspan="6"><input type="number" name="q3" min="0" max="5" class="form-control" required></td>
+                        <td rowspan="6"><input type="number" formControlName="q3" min="0" max="5" class="form-control" required></td>
                     </tr>
                     <tr>
                         <td colspan="5">Basic awareness on fire safety and evacuation is part of the employee orientation program. Re-training is done when necessary. (1)</td>
@@ -88,7 +88,7 @@
                     </tr>
                     <tr>
                         <td colspan="5">We have the necessary and appropriate portable fire extinguishers in the facility. (0)</td>
-                        <td rowspan="6"><input type="number" name="q4" min="0" max="5" class="form-control" required></td>
+                        <td rowspan="6"><input type="number" formControlName="q4" min="0" max="5" class="form-control" required></td>
                     </tr>
                     <tr>
                         <td colspan="5">The number, type and size of fire extinguishers are decided based on the risk assessment. They are maintained as per the manufacturer’s specification. (1)</td>
@@ -108,14 +108,15 @@
                 </tbody>
             </table>
             <br>
-            <div id="scoreDisplay" style="display: none;">
+            <div *ngIf="showScore" id="scoreDisplay">
                 <h2>Emergency Preparedness and Response - Score:</h2>
-                <p id="scoreValue"></p>
+                <p>Total Score: {{ totalScore }}</p>
+                <p>Average Score: {{ averageScore }}</p>
             </div>
             <div class="d-flex justify-content-between">
-            <button id="submitBtn" type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit" id="submitBtn" class="btn btn-primary">Submit</button>
             <button id="cancelBtn" type="button" class="btn btn-secondary"><a href="index.html" class="text-white text-decoration-none">Cancel</a></button>
-            <button id="nextBtn" type="button" class="btn btn-success" routerLink="/stake">Next</button>
+            <button id="nextBtn" type="button" class="btn btn-success" routerLink="/stake" (click)="onNext()">Next</button>
         </div>
         </form>
     </div>

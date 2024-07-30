@@ -1,36 +1,78 @@
-import { Component } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
+import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-stake',
   standalone: true,
-  imports: [FormsModule],
+  imports: [ReactiveFormsModule,CommonModule],
   templateUrl: './stake.component.html',
-  styleUrl: './stake.component.css'
+  styleUrls: ['./stake.component.css'] 
 })
-export class StakeComponent {
-  totalScore = 0;
-  averageScore = 0;
-  showScore = false;
+export class StakeComponent implements OnInit {
+  stakeform: FormGroup;
+  totalScore: number = 0;
+  averageScore: number = 0;
+  showScore: boolean = false;
+  showButtons: boolean = true;
 
-  onSubmit(event: Event): void {
-    event.preventDefault();
+  constructor(private fb: FormBuilder, private router: Router) {
 
-    const numberInputs = Array.from(document.querySelectorAll('input[type="number"]')) as HTMLInputElement[];
-    let total = 0;
-    let answeredQuestions = 0;
-
-    numberInputs.forEach((input) => {
-      const value = parseInt(input.value, 10);
-      if (!isNaN(value)) {
-        total += value;
-        answeredQuestions++;
-      }
+    this.stakeform = this.fb.group({
+      q1: [null, [Validators.required, Validators.min(0), Validators.max(5)]],
+      q2: [null, [Validators.required, Validators.min(0), Validators.max(5)]],
+      q3: [null, [Validators.required, Validators.min(0), Validators.max(5)]],
+      q4: [null, [Validators.required, Validators.min(0), Validators.max(5)]],
+      q5: [null, [Validators.required, Validators.min(0), Validators.max(5)]],
+      q6: [null, [Validators.required, Validators.min(0), Validators.max(5)]],
+      q7: [null, [Validators.required, Validators.min(0), Validators.max(5)]],
+      q8: [null, [Validators.required, Validators.min(0), Validators.max(5)]],
+      q9: [null, [Validators.required, Validators.min(0), Validators.max(5)]],
+      q10: [null, [Validators.required, Validators.min(0), Validators.max(5)]],
+      q11: [null, [Validators.required, Validators.min(0), Validators.max(5)]],
+      q12: [null, [Validators.required, Validators.min(0), Validators.max(5)]],
+      q13: [null, [Validators.required, Validators.min(0), Validators.max(5)]]
     });
-
-    this.averageScore = answeredQuestions > 0 ? total / answeredQuestions : 0;
-    this.totalScore = total;
-    this.showScore = true;
   }
+  ngOnInit(): void {}
 
+  onSubmit(): void {
+    console.log('Submit button clicked');
+    console.log('Form valid:', this.stakeform.valid);
+  
+    if (this.stakeform.valid) {
+      const formValues = this.stakeform.value;
+      localStorage.setItem('stakeScores', JSON.stringify(Object.values(this.stakeform.value)));
+      let totalScore = 0;
+      let numberOfScores = 0;
+     
+  
+      for (const key in formValues) {
+        if (formValues.hasOwnProperty(key)) {
+          const value = parseFloat(formValues[key]);
+          if (!isNaN(value)) {
+            totalScore += value;
+            numberOfScores++;
+          }
+        }
+      }
+  
+      this.averageScore = numberOfScores > 0 ? totalScore / numberOfScores : 0;
+      this.totalScore = totalScore;
+      this.showScore = true;
+    } else {
+      this.stakeform.markAllAsTouched();
+      console.log('Form is invalid');
+    }
+  }
+  
+
+  onNext(): void {
+    if (this.stakeform.valid) {
+      this.router.navigate(['//grievance']); 
+    } else {
+      alert('Please fill in all fields before proceeding.');
+    }
+  }
 }

@@ -4,7 +4,7 @@
     <h1 class="mb-4">Monitoring and Review</h1>
     
     <div class="assessment-container">
-        <form id="monoform" (submit)="onSubmit($event)" class="needs-validation" novalidate>
+        <form  [formGroup]="monotForm" (ngSubmit)="onSubmit()" class="needs-validation" novalidate>
             <table class="table table-bordered">
                 <thead>
                     <tr>
@@ -19,7 +19,7 @@
                     </tr>
                     <tr>
                         <td colspan="5">Normally we do not have a requirement for monitoring our environmental and social (i.e. OHS, human resources, community) performance. If a problem arises, people in that area will monitor the situation. (0)</td>
-                        <td rowspan="6"><input type="number" name="q1" min="0" max="5" class="form-control" required></td>
+                        <td rowspan="6"><input type="number" formControlName="q1" min="0" max="5" class="form-control" required></td>
                     </tr>
                     <tr>
                         <td colspan="5">We don't have a monitoring plan but some information is recorded to verify our compliance with legal requirements. (1)</td>
@@ -42,7 +42,7 @@
                     </tr>
                     <tr>
                         <td colspan="5">We do not monitor our environmental or social performance. (0)</td>
-                        <td rowspan="6"><input type="number" name="q2" min="0" max="5" class="form-control" required></td>
+                        <td rowspan="6"><input type="number" formControlName="q2" min="0" max="5" class="form-control" required></td>
                     </tr>
                     <tr>
                         <td colspan="5">We only collect and analyze information to verify compliance with regulatory requirements. (1)</td>
@@ -65,7 +65,7 @@
                     </tr>
                     <tr>
                         <td colspan="5">1. Use calibrated testing and measuring devices</td>
-                        <td><select name="q1" class="form-select" required>
+                        <td><select formControlName="q3" class="form-select" required>
                             <option value="" disabled selected>Please choose an option</option>
                             <option value="yes">Yes</option>
                             <option value="no">No</option>
@@ -74,7 +74,7 @@
                     </tr>
                     <tr>
                         <td colspan="5">2. Review documents and records (e.g. policies, procedures, employment contracts, payslips, timecards, complaint logs, utility bills, water meter logs, records of purchased chemicals, training records)</td>
-                        <td><select name="q2" class="form-select" required>
+                        <td><select formControlName="q4" class="form-select" required>
                             <option value="" disabled selected>Please choose an option</option>
                             <option value="yes">Yes</option>
                             <option value="no">No</option>
@@ -83,7 +83,7 @@
                     </tr>
                     <tr>
                         <td colspan="5">3. Review labor inspection records</td>
-                        <td><select name="q3" class="form-select" required>
+                        <td><select formControlName="q5" class="form-select" required>
                             <option value="" disabled selected>Please choose an option</option>
                             <option value="yes">Yes</option>
                             <option value="no">No</option>
@@ -92,7 +92,7 @@
                     </tr>
                     <tr>
                         <td colspan="5">4. Review environmental inspection records</td>
-                        <td><select name="q4" class="form-select" required>
+                        <td><select formControlName="q6" class="form-select" required>
                             <option value="" disabled selected>Please choose an option</option>
                             <option value="yes">Yes</option>
                             <option value="no">No</option>
@@ -101,7 +101,7 @@
                     </tr>
                     <tr>
                         <td colspan="5">5. Conduct physical inspections of our facility</td>
-                        <td><select name="q5" class="form-select" required>
+                        <td><select formControlName="q7" class="form-select" required>
                             <option value="" disabled selected>Please choose an option</option>
                             <option value="yes">Yes</option>
                             <option value="no">No</option>
@@ -110,7 +110,7 @@
                     </tr>
                     <tr>
                         <td colspan="5">6. Surveys and questionnaires</td>
-                        <td><select name="q6" class="form-select" required>
+                        <td><select formControlName="q8" class="form-select" required>
                             <option value="" disabled selected>Please choose an option</option>
                             <option value="yes">Yes</option>
                             <option value="no">No</option>
@@ -119,7 +119,7 @@
                     </tr>
                     <tr>
                         <td colspan="5">7. Talk to workers</td>
-                        <td><select name="q7" class="form-select" required>
+                        <td><select formControlName="q9" class="form-select" required>
                             <option value="" disabled selected>Please choose an option</option>
                             <option value="yes">Yes</option>
                             <option value="no">No</option>
@@ -128,7 +128,7 @@
                     </tr>
                     <tr>
                         <td colspan="5">8. Talk to managers and supervisors</td>
-                        <td><select name="q8" class="form-select" required>
+                        <td><select formControlName="q10" class="form-select" required>
                             <option value="" disabled selected>Please choose an option</option>
                             <option value="yes">Yes</option>
                             <option value="no">No</option>
@@ -137,7 +137,7 @@
                     </tr>
                     <tr>
                         <td colspan="5">9. Talk to affected communities</td>
-                        <td><select name="q9" class="form-select" required>
+                        <td><select formControlName="q11" class="form-select" required>
                             <option value="" disabled selected>Please choose an option</option>
                             <option value="yes">Yes</option>
                             <option value="no">No</option>
@@ -146,7 +146,7 @@
                     </tr>
                     <tr>
                         <td colspan="5">10. Ask customers to share guidance</td>
-                        <td><select name="q10" class="form-select" required>
+                        <td><select formControlName="q12" class="form-select" required>
                             <option value="" disabled selected>Please choose an option</option>
                             <option value="yes">Yes</option>
                             <option value="no">No</option>
@@ -155,7 +155,7 @@
                     </tr>
                     <tr>
                         <td colspan="5">11. Seek advice from external consultants and experts</td>
-                        <td><select name="q11" class="form-select" required>
+                        <td><select formControlName="q13" class="form-select" required>
                             <option value="" disabled selected>Please choose an option</option>
                             <option value="yes">Yes</option>
                             <option value="no">No</option>
@@ -164,7 +164,8 @@
                     </tr>
                     <tr>
                         <td colspan="5">We do not monitor our environmental and social performance. (0)</td>
-                        <td rowspan="6"><input type="number" name="q3" min="0" max="5" class="form-control" required></td>
+                        <td rowspan="6"><input type="number" formControlName="q14" min="0" max="5" class="form-control" required>
+                            <div class="text-muted mt-2">Based on your selected options, please choose the number of the question.</div></td>
                     </tr>
                     <tr>
                         <td colspan="5">We use 1-2 of the resources above. (1)</td>
@@ -187,7 +188,7 @@
                     </tr>
                     <tr>
                         <td colspan="5">We do not monitor our environmental and social performance. (0)</td>
-                        <td rowspan="6"><input type="number" name="q4" min="0" max="5" class="form-control" required></td>
+                        <td rowspan="6"><input type="number" formControlName="q15" min="0" max="5" class="form-control" required></td>
                     </tr>
                     <tr>
                         <td colspan="5">Monitoring results are handled by the managers of respective departments. Business or operational planning is normally independent of environmental and social performance results. (1)</td>
@@ -207,16 +208,16 @@
                 </tbody>
             </table>
             <br>
-            <div id="scoreDisplay" style="display: none;">
+            <div *ngIf="showScore">
                 <h2>Monitoring and Review - Score:</h2>
-                <p id="scoreValue"></p>
-            </div>
+                <p>Total Score: {{ totalScore }}</p>
+                <p>Average Score: {{ averageScore }}</p>
+              </div>
             <div class="d-flex justify-content-between">
-                <button id="submitBtn" class="btn btn-primary">Submit</button>
+                <button type="submit"  id="submitBtn" [disabled]="!monotForm.valid" class="btn btn-primary">Submit</button>
                 <button id="cancelbtn" class="btn btn-secondary"><a href="index.html" class="text-white text-decoration-none">Cancel</a>
                 </button>
-            <button type="button" id="nextbtn" class="btn btn-success" routerLink="/result" class="text-white text-decoration-none">Next
-            </button>
+                <button id="nextBtn" type="button" class="btn btn-success" (click)="onNext()">Next</button>
         </div>
         </form>
     </div>

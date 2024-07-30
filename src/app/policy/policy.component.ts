@@ -1,3 +1,4 @@
+import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
@@ -5,16 +6,15 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-policy',
   standalone: true,
-  imports: [ReactiveFormsModule],
+  imports: [ReactiveFormsModule, CommonModule],
   templateUrl: './policy.component.html',
   styleUrls: ['./policy.component.css']
 })
 export class PolicyComponent implements OnInit {
   policyForm: FormGroup;
   totalScore: number = 0;
-  averageScore: number = 0;  // Initialize to 0
+  averageScore: number = 0;
   showScore: boolean = false;
-  showButtons: boolean = true;
 
   constructor(private fb: FormBuilder, private router: Router) {
     this.policyForm = this.fb.group({
@@ -30,36 +30,43 @@ export class PolicyComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  validateForm(): void {
-    const allFieldsFilled = Object.values(this.policyForm.controls).every(control => control.value !== null && control.value !== '');
-    this.showButtons = !allFieldsFilled;
-  }
-
-  onInput(): void {
-    this.validateForm();
-  }
-
   onSubmit(event: Event): void {
     event.preventDefault();
+    console.log("Submit button clicked");
+    console.log("Form Validity: ", this.policyForm.valid);
+    console.log("Form Values: ", this.policyForm.value);
 
     if (this.policyForm.valid) {
-      const values = this.policyForm.value;
-      const scores = Object.values(values).filter(value => value !== null) as number[];
+      const formValues = this.policyForm.value;
+      localStorage.setItem('policyScores', JSON.stringify(Object.values(this.policyForm.value)));
+      
+      let totalScore = 0;
+      let numberOfScores = 0;
+      
 
-      this.totalScore = scores.reduce((sum, score) => sum + score, 0);
-      this.averageScore = scores.length > 0 ? this.totalScore / scores.length : 0;
+      Object.keys(formValues).forEach(key => {
+        const value = parseFloat(formValues[key]); // Parse string to float
+        if (!isNaN(value)) {
+          totalScore += value;
+          numberOfScores++;
+        }
+      });
 
-      this.showScore = true;
-      this.showButtons = false;
+      // Calculate average score
+      this.averageScore = numberOfScores > 0 ? totalScore / numberOfScores : 0;
+      this.totalScore = totalScore;
+      this.showScore = true; // Show the calculated scores
+      console.log("Average Score: ", this.averageScore);
+      console.log("Total Score: ", this.totalScore);
 
-      // Display score
-      const scoreDisplay = document.getElementById('scoreDisplay');
-      if (scoreDisplay) {
-        scoreDisplay.style.display = 'block';
-        document.getElementById('scoreValue')!.innerText = `Average Score: ${this.averageScore.toFixed(2)}`;
-      }
+      // Save the scores to localStorage
+      localStorage.setItem('policyScores', JSON.stringify(formValues));
+      localStorage.setItem('policyTotalScore', this.totalScore.toString());
+      localStorage.setItem('policyAverageScore', this.averageScore.toString());
     } else {
-      alert('Please fill in all fields with values between 0 and 5 before proceeding.');
+      console.log("Form is invalid");
+      // Mark all fields as touched to trigger validation messages
+      this.policyForm.markAllAsTouched();
     }
   }
 

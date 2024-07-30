@@ -1,102 +1,110 @@
-<!-- app.component.html or your specific component template -->
-
 <div class="container mt-4">
     <h1 class="mb-4">External Communication and Grievance Mechanisms</h1>
     
     <div class="assessment-container">
-        <form id="grievanceForm" (submit)="onSubmit($event)" class="needs-validation" novalidate>
-            <table class="table table-bordered">
-                <thead>
-                    <tr>
-                        <th colspan="5">External Communication and Grievance Mechanisms Section 1</th>
-                        <th>Company Self-Assessment</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td colspan="5" class="text-success">
-                            <b>1. If representatives of the local community complained that our company was causing negative environmental or social impacts, we would most likely respond as follows, based on our current practices:</b>
-                        </td>
-                        <td colspan="1"></td>
-                    </tr>
-                    <tr>
-                        <td colspan="5">We do not deal with such groups. (=0)</td>
-                        <td rowspan="5"><input type="number" name="q1" min="0" max="5" class="form-control" required></td>
-                    </tr>
-                    <tr>
-                        <td colspan="5">We would meet with the group to discuss the negative impact and get their suggestions on how to deal with the problem. (=2)</td>
-                    </tr>
-                    <tr>
-                        <td colspan="5">We would meet and coordinate with the group to investigate the problem and discuss the related action plan. (=3)</td>
-                    </tr>
-                    <tr>
-                        <td colspan="5">We would meet and coordinate with the group to investigate the problem and develop, implement, and monitor the related action plan. (=4)</td>
-                    </tr>
-                    <tr>
-                        <td colspan="5">We routinely work with such groups on an ongoing basis to monitor and conduct root-cause analysis of negative impacts that affect the community and address them. (=5)</td>
-                    </tr>
-                    <tr>
-                        <td colspan="5" class="text-success">
-                            <b>2. The following best describes our external stakeholder grievance mechanism related to our ESMS:</b>
-                        </td>
-                        <td colspan="1"></td>
-                    </tr>
-                    <tr>
-                        <td colspan="5">We do not have a grievance mechanism for external stakeholders. (=0)</td>
-                        <td rowspan="6"><input type="number" name="q2" min="0" max="5" class="form-control" required></td>
-                    </tr>
-                    <tr>
-                        <td colspan="5">We have some channels to receive communications from external stakeholders, such as suggestion boxes, email, mail, phone, or designated persons to record verbal complaints. (=1)</td>
-                    </tr>
-                    <tr>
-                        <td colspan="5">We have communication channels such as those listed above. People can present confidential and anonymous complaints. (=2)</td>
-                    </tr>
-                    <tr>
-                        <td colspan="5">Besides the communication channels described above, we have documented procedures for collecting and investigating complaints, and for communicating back decisions taken. (=3)</td>
-                    </tr>
-                    <tr>
-                        <td colspan="5">Besides the system described above, we make sure that our stakeholders understand how they can present a complaint and what will be the process to handle them. (=4)</td>
-                    </tr>
-                    <tr>
-                        <td colspan="5">We have procedures covering all aspects of our grievance mechanism. We involve external stakeholders in reviewing its effectiveness and revising it as needed. (=5)</td>
-                    </tr>
-                    <tr>
-                        <td colspan="5" class="text-success">
-                            <b>3. At my company, handling inquiries, concerns, or formal complaints from external stakeholders is the day-to-day responsibility of:</b>
-                        </td>
-                        <td colspan="1"></td>
-                    </tr>
-                    <tr>
-                        <td colspan="5">It is unclear who at my company has this responsibility. (=0)</td>
-                        <td rowspan="6"><input type="number" name="q3" min="0" max="5" class="form-control" required></td>
-                    </tr>
-                    <tr>
-                        <td colspan="5">We have one person or one area of the company that usually handles this. (=1)</td>
-                    </tr>
-                    <tr>
-                        <td colspan="5">We have one person or one area of the company that manages this, and they coordinate with other areas of the company relevant to particular cases. (=2)</td>
-                    </tr>
-                    <tr>
-                        <td colspan="5">We have a team of people that share this responsibility and have received specific training. (=3)</td>
-                    </tr>
-                    <tr>
-                        <td colspan="5">We have a trained team that manages this, and senior management is directly involved. (=4)</td>
-                    </tr>
-                    <tr>
-                        <td colspan="5">We have a trained team that includes senior management and has the authority to make operational decisions to address external grievances. We reach out to independent facilitators in case of serious complaints. (=5)</td>
-                    </tr>
-                </tbody>
-            </table>
-            <br>
-            <div id="scoreDisplay" style="display: none;">
-                <h2>External Communication and Grievance Mechanisms - Score</h2>
-                <p id="scoreValue"></p>
-            </div>
-            <div class="d-flex justify-content-between">
-                <button id="submitBtn" class="btn btn-primary">Submit</button>
-                <button id="cancelbtn"  class="btn btn-secondary"><a href="index.html" class="text-white text-decoration-none">Cancel</a></button>
-                <button id="nextbtn" class="btn btn-success" routerLink="/Reporting">Next</button>
-            </div>
-        </form>
+      <form [formGroup]="grievanceForm" (ngSubmit)="onSubmit()" class="needs-validation" novalidate>
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th colspan="5">External Communication and Grievance Mechanisms Section 1</th>
+              <th>Company Self-Assessment</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td colspan="5" class="text-success">
+                <b>1. If representatives of the local community complained that our company was causing negative environmental or social impacts, we would most likely respond as follows, based on our current practices:</b>
+              </td>
+              <td colspan="1"></td>
+            </tr>
+            <tr>
+              <td colspan="5">We do not deal with such groups. (=0)</td>
+              <td rowspan="5">
+                <input type="number" formControlName="q1" min="0" max="5" class="form-control" required>
+              </td>
+            </tr>
+            <tr>
+              <td colspan="5">We would meet with the group to discuss the negative impact and get their suggestions on how to deal with the problem. (=2)</td>
+            </tr>
+            <tr>
+              <td colspan="5">We would meet and coordinate with the group to investigate the problem and discuss the related action plan. (=3)</td>
+            </tr>
+            <tr>
+              <td colspan="5">We would meet and coordinate with the group to investigate the problem and develop, implement, and monitor the related action plan. (=4)</td>
+            </tr>
+            <tr>
+              <td colspan="5">We routinely work with such groups on an ongoing basis to monitor and conduct root-cause analysis of negative impacts that affect the community and address them. (=5)</td>
+            </tr>
+            <tr>
+              <td colspan="5" class="text-success">
+                <b>2. The following best describes our external stakeholder grievance mechanism related to our ESMS:</b>
+              </td>
+              <td colspan="1"></td>
+            </tr>
+            <tr>
+              <td colspan="5">We do not have a grievance mechanism for external stakeholders. (=0)</td>
+              <td rowspan="6">
+                <input type="number" formControlName="q2" min="0" max="5" class="form-control" required>
+              </td>
+            </tr>
+            <tr>
+              <td colspan="5">We have some channels to receive communications from external stakeholders, such as suggestion boxes, email, mail, phone, or designated persons to record verbal complaints. (=1)</td>
+            </tr>
+            <tr>
+              <td colspan="5">We have communication channels such as those listed above. People can present confidential and anonymous complaints. (=2)</td>
+            </tr>
+            <tr>
+              <td colspan="5">Besides the communication channels described above, we have documented procedures for collecting and investigating complaints, and for communicating back decisions taken. (=3)</td>
+            </tr>
+            <tr>
+              <td colspan="5">Besides the system described above, we make sure that our stakeholders understand how they can present a complaint and what will be the process to handle them. (=4)</td>
+            </tr>
+            <tr>
+              <td colspan="5">We have procedures covering all aspects of our grievance mechanism. We involve external stakeholders in reviewing its effectiveness and revising it as needed. (=5)</td>
+            </tr>
+            <tr>
+              <td colspan="5" class="text-success">
+                <b>3. At my company, handling inquiries, concerns, or formal complaints from external stakeholders is the day-to-day responsibility of:</b>
+              </td>
+              <td colspan="1"></td>
+            </tr>
+            <tr>
+              <td colspan="5">It is unclear who at my company has this responsibility. (=0)</td>
+              <td rowspan="6">
+                <input type="number" formControlName="q3" min="0" max="5" class="form-control" required>
+              </td>
+            </tr>
+            <tr>
+              <td colspan="5">We have one person or one area of the company that usually handles this. (=1)</td>
+            </tr>
+            <tr>
+              <td colspan="5">We have one person or one area of the company that manages this, and they coordinate with other areas of the company relevant to particular cases. (=2)</td>
+            </tr>
+            <tr>
+              <td colspan="5">We have a team of people that share this responsibility and have received specific training. (=3)</td>
+            </tr>
+            <tr>
+              <td colspan="5">We have a trained team that manages this, and senior management is directly involved. (=4)</td>
+            </tr>
+            <tr>
+              <td colspan="5">We have a trained team that includes senior management and has the authority to make operational decisions to address external grievances. We reach out to independent facilitators in case of serious complaints. (=5)</td>
+            </tr>
+          </tbody>
+        </table>
+        <br>
+        <div id="scoreDisplay" *ngIf="showScore">
+          <h2>External Communication and Grievance Mechanisms - Score</h2>
+          <p>Total Score: {{ totalScore }}</p>
+          <p>Average Score: {{ averageScore }}</p>
+        </div>
+        <div class="d-flex justify-content-between">
+          <button type="submit" class="btn btn-primary">Submit</button>
+          <button type="button" class="btn btn-secondary">
+            <a href="index.html" class="text-white text-decoration-none">Cancel</a>
+          </button>
+          <button type="button" class="btn btn-success" routerLink="/reporting" (click)="onNext()">Next</button>
+        </div>
+      </form>
     </div>
-</div>
+  </div>
+  

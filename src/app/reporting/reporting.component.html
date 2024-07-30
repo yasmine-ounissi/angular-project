@@ -1,10 +1,8 @@
-<!-- app.component.html or your specific component template -->
-
 <div class="container mt-4">
     <h1 class="mb-4">Ongoing Reporting to Affected Communities</h1>
     
     <div class="assessment-container">
-        <form id="reportForm" (submit)="onSubmit($event)" class="needs-validation" novalidate>
+        <form [formGroup]="reportingForm" (ngSubmit)="onSubmit()" class="needs-validation" novalidate>
             <table class="table table-bordered">
                 <thead>
                     <tr>
@@ -21,7 +19,7 @@
                     </tr>
                     <tr>
                         <td colspan="5">We do not communicate with anyone about our company’s operations. (0)</td>
-                        <td rowspan="6"><input type="number" name="q1" min="0" max="5" class="form-control" required></td>
+                        <td rowspan="6"><input type="number" formControlName="q1" min="0" max="5" class="form-control" required></td>
                     </tr>
                     <tr>
                         <td colspan="5">We acknowledge receipt of their request and tell them we will handle it internally. (1)</td>
@@ -46,7 +44,7 @@
                     </tr>
                     <tr>
                         <td colspan="5">We do not communicate with anyone about our company’s operations. (0)</td>
-                        <td rowspan="6"><input type="number" name="q2" min="0" max="5" class="form-control" required></td>
+                        <td rowspan="6"><input type="number" formControlName="q2" min="0" max="5" class="form-control" required></td>
                     </tr>
                     <tr>
                         <td colspan="5">We inform the individual or group that presented a grievance about the actions taken. (1)</td>
@@ -72,7 +70,7 @@
                     <tr>
                         <td colspan="5">1. Meetings (reporting out and receiving feedback)</td>
                         <td>
-                            <select name="q1" class="form-select" required>
+                            <select formControlName="q3" class="form-select" required>
                                 <option value="" disabled selected>Please choose an option</option>
                                 <option value="yes">Yes</option>
                                 <option value="no">No</option>
@@ -82,7 +80,7 @@
                     <tr>
                         <td colspan="5">2. Website (reporting out)</td>
                         <td>
-                            <select name="q2" class="form-select" required>
+                            <select formControlName="q4" class="form-select" required>
                                 <option value="" disabled selected>Please choose an option</option>
                                 <option value="yes">Yes</option>
                                 <option value="no">No</option>
@@ -92,7 +90,7 @@
                     <tr>
                         <td colspan="5">3. Dedicated email address (receiving feedback)</td>
                         <td>
-                            <select name="q3" class="form-select" required>
+                            <select formControlName="q5" class="form-select" required>
                                 <option value="" disabled selected>Please choose an option</option>
                                 <option value="yes">Yes</option>
                                 <option value="no">No</option>
@@ -102,7 +100,7 @@
                     <tr>
                         <td colspan="5">4. Dedicated phone line (receiving feedback)</td>
                         <td>
-                            <select name="q4" class="form-select" required>
+                            <select formControlName="q6" class="form-select" required>
                                 <option value="" disabled selected>Please choose an option</option>
                                 <option value="yes">Yes</option>
                                 <option value="no">No</option>
@@ -112,7 +110,7 @@
                     <tr>
                         <td colspan="5">5. Town hall meetings (reporting out and receiving feedback)</td>
                         <td>
-                            <select name="q5" class="form-select" required>
+                            <select formControlName="q7" class="form-select" required>
                                 <option value="" disabled selected>Please choose an option</option>
                                 <option value="yes">Yes</option>
                                 <option value="no">No</option>
@@ -122,7 +120,7 @@
                     <tr>
                         <td colspan="5">6. Presentations at forums, training workshops and conventions (reporting out)</td>
                         <td>
-                            <select name="q6" class="form-select" required>
+                            <select formControlName="q8" class="form-select" required>
                                 <option value="" disabled selected>Please choose an option</option>
                                 <option value="yes">Yes</option>
                                 <option value="no">No</option>
@@ -132,7 +130,7 @@
                     <tr>
                         <td colspan="5">7. Written reports (reporting out)</td>
                         <td>
-                            <select name="q7" class="form-select" required>
+                            <select formControlName="q9" class="form-select" required>
                                 <option value="" disabled selected>Please choose an option</option>
                                 <option value="yes">Yes</option>
                                 <option value="no">No</option>
@@ -142,7 +140,7 @@
                     <tr>
                         <td colspan="5">8. Direct mail (reporting out)</td>
                         <td>
-                            <select name="q8" class="form-select" required>
+                            <select formControlName="q10" class="form-select" required>
                                 <option value="" disabled selected>Please choose an option</option>
                                 <option value="yes">Yes</option>
                                 <option value="no">No</option>
@@ -152,7 +150,7 @@
                     <tr>
                         <td colspan="5">9. Brochures, flyers, banners (reporting out)</td>
                         <td>
-                            <select name="q9" class="form-select" required>
+                            <select formControlName="q11" class="form-select" required>
                                 <option value="" disabled selected>Please choose an option</option>
                                 <option value="yes">Yes</option>
                                 <option value="no">No</option>
@@ -162,7 +160,7 @@
                     <tr>
                         <td colspan="5">10. Advertisements in local publications (reporting out)</td>
                         <td>
-                            <select name="q10" class="form-select" required>
+                            <select formControlName="q12" class="form-select" required>
                                 <option value="" disabled selected>Please choose an option</option>
                                 <option value="yes">Yes</option>
                                 <option value="no">No</option>
@@ -172,7 +170,7 @@
                     <tr>
                         <td colspan="5">11. Surveys (receiving feedback)</td>
                         <td>
-                            <select name="q11" class="form-select" required>
+                            <select formControlName="q13" class="form-select" required>
                                 <option value="" disabled selected>Please choose an option</option>
                                 <option value="yes">Yes</option>
                                 <option value="no">No</option>
@@ -181,7 +179,7 @@
                     </tr>
                     <tr>
                         <td colspan="5">a.0 of the above (0)</td>
-                        <td rowspan="6"><input type="number" name="q3" min="0" max="5" class="form-control" required></td>
+                        <td rowspan="6"><input type="number" formControlName="q14" min="0" max="5" class="form-control" required></td>
                     </tr>
                     <tr>
                         <td colspan="5">b. 1 of the above (1)</td>
@@ -201,14 +199,15 @@
                 </tbody>
             </table>
             <br>
-            <div id="scoreDisplay" style="display: none;">
+            <div *ngIf="showScore">
                 <h2>Ongoing Reporting to Affected Communities - Score:</h2>
-                <p id="scoreValue"></p>
-            </div>
+                <p>Total Score: {{ totalScore }}</p>
+                <p>Average Score: {{ averageScore }}</p>
+              </div>
             <div class="d-flex justify-content-between">
-                <button id="submitBtn" class="btn btn-primary">Submit</button>
+                <button id="submitBtn"  [disabled]="!reportingForm.valid" class="btn btn-primary">Submit</button>
                 <button id="cancelbtn"  class="btn btn-secondary"><a href="index.html" class="text-white text-decoration-none">Cancel</a></button>
-                <button id="nextbtn" class="btn btn-success" routerLink="/monot">Next </button>
+                <button id="nextbtn" class="btn btn-success" (click)="onNext()">Next </button>
             </div>
         </form>
     </div>

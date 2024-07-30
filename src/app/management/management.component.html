@@ -2,7 +2,7 @@
     <h1 class="my-4">Management Programs</h1>
     
     <div class="assessment-container">
-        <form id="managform" (submit)="onSubmit($event)" class="needs-validation" novalidate>
+        <form [formGroup]="managform" (ngSubmit)="onSubmit()" class="needs-validation" novalidate>
             <table class="table table-bordered">
                 <thead class="thead-light">
                     <tr>
@@ -17,7 +17,7 @@
                     </tr>
                     <tr>
                         <td colspan="5">Assume that the people involved will handle the problem. (0)</td>
-                        <td rowspan="6"><input type="number" name="q1" min="0" max="5" class="form-control" required></td>
+                        <td rowspan="6"><input type="number" formControlName="q1" min="0" max="5" class="form-control" required></td>
                     </tr>
                     <tr>
                         <td colspan="5">Depend on the investor, customer or external stakeholder to tell us what to do. (1)</td>
@@ -40,7 +40,7 @@
                     </tr>
                     <tr>
                         <td colspan="5">Our procedures are focused on business operations only and do not address environmental and social risks and impacts. (0)</td>
-                        <td rowspan="6"><input type="number" name="q2" min="0" max="5" class="form-control" required></td>
+                        <td rowspan="6"><input type="number" formControlName="q2" min="0" max="5" class="form-control" required></td>
                     </tr>
                     <tr>
                         <td colspan="5">The people at my company are aware of the environmental and social risk management procedures but these are not documented. (1)</td>
@@ -63,7 +63,7 @@
                     </tr>
                     <tr>
                         <td colspan="5">Normally we do not require specific action plans, as the concerned departments take appropriate actions to address the environmental and social issues. (0)</td>
-                        <td rowspan="6"><input type="number" name="q3" min="0" max="5" class="form-control" required></td>
+                        <td rowspan="6"><input type="number" formControlName="q3" min="0" max="5" class="form-control" required></td>
                     </tr>
                     <tr>
                         <td colspan="5">Our action plans are primarily developed for us by external consultants/experts. (1)</td>
@@ -86,7 +86,7 @@
                     </tr>
                     <tr>
                         <td colspan="5">Normally we do not develop specific action plans. If necessary, the concerned personnel are informed verbally or by phone/e-mail. (0)</td>
-                        <td rowspan="6"><input type="number" name="q4" min="0" max="5" class="form-control" required></td>
+                        <td rowspan="6"><input type="number" formControlName="q4" min="0" max="5" class="form-control" required></td>
                     </tr>
                     <tr>
                         <td colspan="5">Our action plans are simple and list the actions to be taken along with the target dates. (1)</td>
@@ -104,12 +104,12 @@
                         <td colspan="5">We have a structured format for the action plans that includes operational procedures needed for the long-term sustainability of the actions. All necessary information pertaining to targeted objectives and indicators, actions, target dates, responsibility and necessary resources are well-defined. (5)</td>
                     </tr>
                     <tr>
-                        <td colspan="5" class="text-success"> <strong>5. We make sure that the action plans have been implemented by doing the following: </strong></td>
+                        <td colspan="5" class="text-success"><strong>5. We make sure that the action plans have been implemented by doing the following: </strong></td>
                         <td colspan="2"></td>
                     </tr>
                     <tr>
                         <td colspan="5">If we don’t hear another complaint about it, we assume it’s resolved. (0)</td>
-                        <td rowspan="6"><input type="number" name="q5" min="0" max="5" class="form-control" required></td>
+                        <td rowspan="6"><input type="number" formControlName="q5" min="0" max="5" class="form-control" required></td>
                     </tr>
                     <tr>
                         <td colspan="5">The people directly involved are responsible for checking progress on the Action Plans. (1)</td>
@@ -129,17 +129,18 @@
                 </tbody>
             </table>
             <br>
-            <div id="scoreDisplay" class="d-none">
+            <div id="scoreDisplay" *ngIf="showScore">
                 <h2>Management Scores:</h2>
-                <p id="scoreValue"></p>
+                <p>Total Score: {{ totalScore }}</p>
+                <p>Average Score: {{ averageScore.toFixed(2) }}</p>
             </div>
             <div class="d-flex justify-content-between">
-                <button id="submitBtn" class="btn btn-primary">Submit</button>
-                <button id="cancelbtn" class="btn btn-secondary"><a href="index.html" class="text-white text-decoration-none">Cancel</a>
+                <button type="submit" id="submitBtn" class="btn btn-primary">Submit</button>
+                <button id="cancelbtn" class="btn btn-secondary">
+                    <a href="index.html" class="text-white text-decoration-none">Cancel</a>
                 </button>
-            <button type="button" id="nextbtn" class="btn btn-success" routerLink="/orga">Next
-            </button>
-        </div>
+                <button type="button" id="nextbtn" class="btn btn-success" routerLink="/orga" (click)="onNext()">Next</button>
+            </div>
         </form>
     </div>
 </div>

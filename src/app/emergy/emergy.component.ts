@@ -1,36 +1,70 @@
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-emergy',
   standalone: true,
-  imports: [FormsModule],
+  imports: [ReactiveFormsModule,CommonModule],
   templateUrl: './emergy.component.html',
-  styleUrl: './emergy.component.css'
+  styleUrls: ['./emergy.component.css'] 
 })
 export class EmergyComponent {
+  emergencyForm: FormGroup;
   totalScore: number = 0;
   averageScore: number = 0;
   showScore: boolean = false;
+  showButtons: boolean = true;
 
-  onSubmit(event: Event): void {
-    event.preventDefault();
-
-    const numberInputs = Array.from(document.querySelectorAll('input[type="number"]')) as HTMLInputElement[];
-    let total = 0;
-    let answeredQuestions = 0;
-
-    numberInputs.forEach(input => {
-      const value = parseInt(input.value, 10);
-      if (!isNaN(value)) {
-        total += value;
-        answeredQuestions++;
-      }
+  constructor(private router: Router, private fb: FormBuilder) {
+    this.emergencyForm = this.fb.group({
+      q1: [null, [Validators.required, Validators.min(0), Validators.max(5)]],
+      q2: [null, [Validators.required, Validators.min(0), Validators.max(5)]],
+      q3: [null, [Validators.required, Validators.min(0), Validators.max(5)]],
+      q4: [null, [Validators.required, Validators.min(0), Validators.max(5)]],
     });
-
-    this.averageScore = (answeredQuestions > 0) ? total / answeredQuestions : 0;
-    this.totalScore = total;
-    this.showScore = true;
   }
 
+  ngOnInit(): void {}
+
+  onSubmit(): void {
+    if (this.emergencyForm.valid) {
+      const formValues = this.emergencyForm.value;
+      localStorage.setItem('emergencyScores', JSON.stringify(Object.values(this.emergencyForm.value)));
+
+      let totalScore = 0;
+      let numberOfScores = 0;
+
+      for (const key in formValues) {
+        if (formValues.hasOwnProperty(key)) {
+          const value = parseFloat(formValues[key]);
+          if (!isNaN(value)) {
+            totalScore += value;
+            numberOfScores++;
+          }
+        }
+      }
+
+      this.averageScore = numberOfScores > 0 ? totalScore / numberOfScores : 0;
+      this.totalScore = totalScore;
+      this.showScore = true;
+    } else {
+
+      this.emergencyForm.markAllAsTouched();
+    }
+  }
+
+
+
+  onNext(): void {
+    const numberInputs = Array.from(document.querySelectorAll('input[type="number"]')) as HTMLInputElement[];
+    const allFieldsFilled = numberInputs.every(input => input.value.trim() !== '');
+
+    if (allFieldsFilled) {
+      this.router.navigate(['/stake']); 
+    } else {
+      alert('Please fill in all fields before proceeding.');
+    }
+  }
 }

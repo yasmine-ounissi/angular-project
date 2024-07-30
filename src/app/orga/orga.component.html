@@ -1,7 +1,7 @@
 <div class="container">
     <h1>Organisation</h1>
     <div class="assessment-container">
-        <form id="orgaform" (submit)="onSubmit($event)" class="needs-validation" novalidate>
+        <form [formGroup]="orgaform" (ngSubmit)="onSubmit()" class="needs-validation" novalidate>
             <table class="table table-bordered">
                 <thead>
                     <tr>
@@ -17,7 +17,7 @@
                     </tr>
                     <tr>
                         <td colspan="5">We only deal with these matters on a case-by-case basis, so no one is assigned. (0)</td>
-                        <td colspan="2" rowspan="6"><input type="number" name="q1" min="0" max="5" class="form-control"  required></td>
+                        <td colspan="2" rowspan="6"><input type="number" formControlName="q1" min="0" max="5" class="form-control"  required></td>
                     </tr>
                     <tr>
                         <td colspan="5">This is usually handled on a limited basis by one or two people in the areas that manage our customer/investor relationships, such as Marketing, Finance, Administration and Legal. They handle these issues only when customers and investors ask. (1)</td>
@@ -41,17 +41,17 @@
                     <tr>
                         <td colspan="5">1. Develop and modify policies</td>
                         <td>
-                            <select name="q1" class="form-control" required>
+                            <select formControlName="q2" class="form-control" required>
                                 <option value="" disabled selected>Please choose an option</option>
                                 <option value="yes">Yes</option>
                                 <option value="no">No</option>
-                            </select>
+                              </select>
                         </td>
                     </tr>
                     <tr>
                         <td colspan="5">2. Revise and implement procedures and work instructions</td>
                         <td>
-                            <select name="q2" class="form-control" required>
+                            <select formControlName="q3" class="form-control" required>
                                 <option value="" disabled selected>Please choose an option</option>
                                 <option value="yes">Yes</option>
                                 <option value="no">No</option>
@@ -61,7 +61,7 @@
                     <tr>
                         <td colspan="5">3. Conduct internal monitoring</td>
                         <td>
-                            <select name="q3" class="form-control" required>
+                            <select formControlName="q4" class="form-control" required>
                                 <option value="" disabled selected>Please choose an option</option>
                                 <option value="yes">Yes</option>
                                 <option value="no">No</option>
@@ -71,7 +71,7 @@
                     <tr>
                         <td colspan="5">4. Follow up on the internal and external audits to address problems</td>
                         <td>
-                            <select name="q4" class="form-control" required>
+                            <select formControlName="q5" class="form-control" required>
                                 <option value="" disabled selected>Please choose an option</option>
                                 <option value="yes">Yes</option>
                                 <option value="no">No</option>
@@ -81,7 +81,7 @@
                     <tr>
                         <td colspan="5">5. Conduct manager and worker training</td>
                         <td>
-                            <select name="q5"class="form-control" required>
+                            <select formControlName="q6"class="form-control" required>
                                 <option value="" disabled selected>Please choose an option</option>
                                 <option value="yes">Yes</option>
                                 <option value="no">No</option>
@@ -91,7 +91,7 @@
                     <tr>
                         <td colspan="5">6. Establish and manage worker communication channels</td>
                         <td>
-                            <select name="q6" class="form-control" required>
+                            <select formControlName="q7" class="form-control" required>
                                 <option value="" disabled selected>Please choose an option</option>
                                 <option value="yes">Yes</option>
                                 <option value="no">No</option>
@@ -101,7 +101,7 @@
                     <tr>
                         <td colspan="5">7. Coordinate among the business departments to implement Action Plans</td>
                         <td>
-                            <select name="q7" class="form-control" required>
+                            <select formControlName="q8" class="form-control" required>
                                 <option value="" disabled selected>Please choose an option</option>
                                 <option value="yes">Yes</option>
                                 <option value="no">No</option>
@@ -111,7 +111,7 @@
                     <tr>
                         <td colspan="5">8. Approve or veto business decisions that have significant potential negative impact</td>
                         <td>
-                            <select name="q8" class="form-control" required>
+                            <select formControlName="q9" class="form-control" required>
                                 <option value="" disabled selected>Please choose an option</option>
                                 <option value="yes">Yes</option>
                                 <option value="no">No</option>
@@ -121,7 +121,7 @@
                     <tr>
                         <td colspan="5">9. Hire external experts as needed</td>
                         <td>
-                            <select name="q9" class="form-control" required>
+                            <select formControlName="q10" class="form-control" required>
                                 <option value="" disabled selected>Please choose an option</option>
                                 <option value="yes">Yes</option>
                                 <option value="no">No</option>
@@ -131,7 +131,7 @@
                     <tr>
                         <td colspan="5">10. Manage environmental and social issues with suppliers and contractors</td>
                         <td>
-                            <select name="q10" class="form-control" required>
+                            <select formControlName="q11" class="form-control" required>
                                 <option value="" disabled selected>Please choose an option</option>
                                 <option value="yes">Yes</option>
                                 <option value="no">No</option>
@@ -141,7 +141,7 @@
                     <tr>
                         <td colspan="5">11. Engage local organizations, government, trade union and other groups on issues related to workers, environment and community</td>
                         <td>
-                            <select name="q11" class="form-control" required>
+                            <select formControlName="q12" class="form-control" required>
                                 <option value="" disabled selected>Please choose an option</option>
                                 <option value="yes">Yes</option>
                                 <option value="no">No</option>
@@ -151,7 +151,7 @@
                     <tr>
                         <td colspan="5">12. Report on performance to senior management</td>
                         <td>
-                            <select name="q12" class="form-control" required>
+                            <select formControlName="q13" class="form-control" required>
                                 <option value="" disabled selected>Please choose an option</option>
                                 <option value="yes">Yes</option>
                                 <option value="no">No</option>
@@ -160,7 +160,8 @@
                     </tr>
                     <tr>
                         <td colspan="5">0 of the above activities (0)</td>
-                        <td colspan="2" rowspan="6"><input type="number" name="q2" min="0" max="5" class="form-control" required></td>
+                        <td colspan="2" rowspan="6"><input type="number" formControlName="q14" min="0" max="5" class="form-control" required>
+                            <div class="text-muted mt-2">Based on your selected options, please choose the number of the question.</div></td>
                     </tr>
                     <tr>
                         <td colspan="5">1-2 of the above activities (1)</td>
@@ -184,7 +185,7 @@
                     </tr>
                     <tr>
                         <td colspan="5">We do not have environmental and social expertise in our company. (0)</td>
-                        <td colspan="2" rowspan="6"><input type="number" name="q3" min="0" max="5" class="form-control" required></td>
+                        <td colspan="2" rowspan="6"><input type="number" formControlName="q15" min="0" max="5" class="form-control" required></td>
                     </tr>
                     <tr>
                         <td colspan="5">We do not have environmental and social expertise in our company. We completely rely on external parties. (1)</td>
@@ -208,7 +209,7 @@
                     </tr>
                     <tr>
                         <td colspan="5">We focus our employee training on job-related skills only. (0)</td>
-                        <td colspan="2" rowspan="6"><input type="number" name="q4" min="0" max="5" class="form-control" required></td>
+                        <td colspan="2" rowspan="6"><input type="number" formControlName="q16" min="0" max="5" class="form-control" required></td>
                         
                     </tr>
                     <tr>
@@ -229,14 +230,15 @@
                 </tbody>
             </table>
             <br>
-            <div id="scoreDisplay" style="display: none;">
-                <h2>Organisation Scores:</h2>
-                <p id="scoreValue"></p>
-            </div>
+            <div id="scoreDisplay" *ngIf="showScore">
+                <h2>Organistaion-assessment: Score:</h2>
+                <p id="scoreValue">Total Score: {{ totalScore }}</p>
+                <p id="scoreValue">Average Score: {{ averageScore.toFixed(2) }}</p>
+              </div>
             <div class="d-flex justify-content-between">
-            <button id="submitBtn" type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit"  id="submitBtn" type="submit" class="btn btn-primary">Submit</button>
             <button id="cancelBtn" type="button" class="btn btn-secondary"><a href="index.html" class="text-white text-decoration-none">Cancel</a></button>
-            <button id="nextBtn" type="button" class="btn btn-success" routerLink="/emergy">Next</button>
+            <button id="nextBtn" type="button" class="btn btn-success"  routerLink="/emergy" (click)="onNext()">Next</button>
         </div>
         </form>
     </div>
